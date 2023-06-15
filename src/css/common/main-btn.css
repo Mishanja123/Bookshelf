@@ -1,0 +1,51 @@
+/**
+  |============================
+  | Main buttons
+  |============================
+*/
+
+.main-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    line-height: 1.29;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    padding: 14px 23px;
+    color: var(--black-cl);
+
+    background-color: transparent;
+    border: 2px solid var(--btn-border-cl);
+    border-radius: 40px;
+}
+
+@media screen and (max-width: 374.98px) {
+    .main-btn {
+        font-size: 14px;
+        line-height: 1.28;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-btn {
+        font-size: 18px;
+        line-height: 1.3;
+        padding: 20px 150px;
+        height: 64px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main-btn {
+        line-height: 1.333;
+    }
+}
+
+.main-btn:hover,
+.main-btn:focus {
+    color:var(--white-cl);
+    background-color: var(--hover-light-cl);
+}

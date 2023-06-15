@@ -1,0 +1,49 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+
+@import url('./common/body.css');
+@import url('./common/reset.css');
+@import url('./common/utils.css');
+@import url('./common/main-btn.css');
+@import url('./common/slider-btn.css');
+
+
+
+/* Main page */
+@import url('./home-page/home-page.css');
+@import url('./shoping-page/shoping-page.css');
+/* Modals */
+@import url('./modals/modals.css');
+
+
+:root {
+    --white-cl:#FFFFFF;
+    --black-cl:#111111;
+
+    --main-light-txt-cl:#11111199;
+    --main-dark-txt-cl: #FFFFFF99;
+    /* --modal-light-txt-cl:;
+    --modal-dark-txt-cl:; */
+
+    --btn-border-cl:#4F2EE8;
+
+    --hover-light-cl:#4F2EE8;
+    --hover-dark-cl:#EAC645;
+
+
+
+    /* Background */
+    --main-light-bg: #F6F6F6;
+    --main-dark-bg:#202024;
+
+
+
+    /* Other */
+    --z-index-header: 999;
+    --z-index-hero-cont: 1;
+    --z-index-rating-mark-block: 2;
+}
