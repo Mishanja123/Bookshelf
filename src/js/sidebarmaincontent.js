@@ -1,7 +1,7 @@
 import {
   marckUpSideCategories,
   marckAllCategories,
-  marckCategorieItem,target
+  marckCategorieItem,
 } from './marckupcategories.js'
 
 const sideCategoriesList = document.querySelector('.js_side_categories_list');
@@ -28,7 +28,7 @@ sideCategoriesList.addEventListener('click', onClick);
 
 async function onClick(e) {
   e.preventDefault();
-  const target = e.target.textContent;
+  let target = e.target.textContent;
 
   if (!(e.target.tagName === 'A')) {
     return;
