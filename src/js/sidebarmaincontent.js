@@ -28,7 +28,7 @@ sideCategoriesList.addEventListener('click', onClick);
 
 async function onClick(e) {
   e.preventDefault();
-  let target = e.target.textContent;
+  target = e.target.textContent;
 
   if (!(e.target.tagName === 'A')) {
     return;
