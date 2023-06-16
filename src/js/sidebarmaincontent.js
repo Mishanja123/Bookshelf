@@ -4,7 +4,7 @@ import {
   marckUpSideCategories,
   marckAllCategories,
   marckCategorieItem,
-} from './marckCategories';
+} from './marckcategories'
 
 const sideCategoriesList = document.querySelector('.js_side_categories_list');
 const js_books_view = document.querySelector('.js_books_view');
