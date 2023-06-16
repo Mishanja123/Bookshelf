@@ -1,9 +1,7 @@
-import axios, { Axios } from 'axios';
-
 import {
   marckUpSideCategories,
   marckAllCategories,
-  marckCategorieItem,
+  marckCategorieItem,target
 } from './marckupcategories.js'
 
 const sideCategoriesList = document.querySelector('.js_side_categories_list');
