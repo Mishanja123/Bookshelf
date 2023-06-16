@@ -1,4 +1,4 @@
-import { fetchCategoryList, fetchBestSellers, fetchCategory} from './fetchapi';
+import { fetchCategoryList, fetchBestSellers, fetchCategory} from './fetchapi.js';
 
 const titleCategories = document.querySelector('.title_categories');
 
