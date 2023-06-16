@@ -73,18 +73,3 @@ export async function marckCategorieItem() {
   });
   return marcup;
 }
-
-export async function marckBookModal() {
-  const marcup = await fetchBook().then(resp => {
-    return resp
-      .map(
-        ({ list_name }) => `
-      <li>
-      <a href="#">${list_name}</a>
-      </li>`
-      )
-      .join('');
-  });
-
-  return marcup;
-}
