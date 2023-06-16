@@ -1,0 +1,43 @@
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--bg-modal-dark);
+    border-bottom-color: var(--brand-color);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    display: flex;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-dark {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--main-light-bg);
+    border-bottom-color: var(--brand-color);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    display: flex;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
