@@ -14,8 +14,10 @@
 
 
 /* Main page */
+@import url('./header.css');
 @import url('./home-page/home-page.css');
 @import url('./shoping-page/shoping-page.css');
+@import url('./support.css');
 /* Modals */
 @import url('./modals/modals.css');
 
