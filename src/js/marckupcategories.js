@@ -21,7 +21,7 @@ export async function marckAllCategories() {
   const marcup = await fetchBestSellers().then(resp => {
     return resp
       .map(({ list_name, books }) => {
-        allCategoriesTitlePage = `Best Sellers Books`;
+        const allCategoriesTitlePage = `Best Sellers Books`;
         const startTitle = allCategoriesTitlePage
           .split(' ')
           .splice(0, allCategoriesTitlePage.split(' ').length - 1)
