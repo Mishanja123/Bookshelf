@@ -27,13 +27,13 @@
   
 
     /*Text*/
-    --main-light-txt-cl:#11111199;
-    --main-dark-txt-cl: #ffffff99;
+    --main-light-txt-cl:#11111199; /*60%*/
+    --main-dark-txt-cl: #ffffff99; /*60%*/
     --modal-txt:#11111180;
-    --modal-txt-dark:#f6f6f680;
+    --modal-txt-dark:#f6f6f680; /*50%*/
     --name-section-txt:#B4AFAF;
-    --blank-shopping-list:#00000099;
-    --edit-sl-dark:#ffffff80;
+    --blank-shopping-list:#00000099; /*60%*/
+    --edit-sl-dark:#ffffff80; /*50%*/
     
     /* --modal-light-txt-cl:;
     --modal-dark-txt-cl:; */
@@ -55,7 +55,7 @@
     /* Background */
     --main-light-bg: #F6F6F6;
     --main-dark-bg:#202024;
-    --shopping-list:#11111166;
+    --shopping-list:#11111166; /*40%*/
     --switch-light-theme: linear-gradient(rgb(79, 46, 232), rgb(220, 220, 220));
     --switch-dark-theme: linear-gradient(rgb(79, 46, 232), rgb(104, 104, 104));
     --gradient: radial-gradient(at top right,rgb(79, 46, 232),rgb(255, 255, 255));
