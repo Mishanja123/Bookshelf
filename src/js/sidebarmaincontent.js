@@ -1,5 +1,3 @@
-import axios, { Axios } from 'axios';
-
 import {
   marckUpSideCategories,
   marckAllCategories,
@@ -7,7 +5,7 @@ import {
 } from './marckupcategories.js'
 
 const sideCategoriesList = document.querySelector('.js_side_categories_list');
-const js_books_view = document.querySelector('.js_books_view');
+const booksView = document.querySelector('.js_books_view');
 
 async function createMarckUpSideCategories() {
   const mark = await marckUpSideCategories();
@@ -17,13 +15,13 @@ createMarckUpSideCategories();
 
 async function createMarckAllCategories() {
   const mark = await marckAllCategories();
-  js_books_view.innerHTML = mark;
+  booksView.innerHTML = mark;
 }
 createMarckAllCategories();
 
 async function createMarckCategorieItem() {
   const mark = await marckCategorieItem();
-  js_books_view.innerHTML = mark;
+  booksView.innerHTML = mark;
 }
 
 sideCategoriesList.addEventListener('click', onClick);
