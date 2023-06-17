@@ -17,7 +17,7 @@ a {
 
 img {
     font-size: 0;
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
 }
 

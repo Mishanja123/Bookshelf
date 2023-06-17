@@ -39,7 +39,7 @@ letter-spacing: -0.04em;
  flex-direction: column;
  gap: 20px;
 }
-.support-item {
+.support-item.swiper-slide {
  display: flex;
  gap: 16px;
  justify-content: flex-start;
@@ -50,4 +50,16 @@ letter-spacing: -0.04em;
 .support-image {
  color: var(--white-cl);
  filter: brightness(0) invert(1);
+}
+
+/* .slider {
+ display: flex;
+} */
+
+.slider-nav {
+ overflow: hidden;
+ /* width: 100px; */
+ /* margin-right: 30px; */
+ flex-shrink: 0;
+ /* height: 500px; */
 }
