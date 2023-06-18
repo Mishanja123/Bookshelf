@@ -68,17 +68,16 @@ function onSeeMore(e) {
   if (!targetBtn) {
     return
   }
-  let fetchtitle = e.target.closest('.category-books').firstChild.textContent
-  console.log(fetchtitle); 
-  createMarckCategorieItemMore(fetchtitle)
-  e.target.classList.add('no-btn')
-  ([...e.target.previousSibling.children]).map(el => el.classList.remove('hidden'))
+  let fetchtitle = e.target.closest('.category-books').firstChild.textContent;
+  createMarckCategorieItemMore(fetchtitle);
+  e.target.classList.add('no-btn');
+  ([...e.target.previousSibling.children]).map(el => el.classList.remove('hidden'));
 }
 
 async function createMarckCategorieItemMore(target) {
-  const listBooks = document.querySelectorAll('.list-books')
-  const a = ([...listBooks]).filter(el => el.dataset.category === target)
-  const mark = await marckCategorieItemMore(target)
+  const listBooks = document.querySelectorAll('.list-books');
+  const a = ([...listBooks]).filter(el => el.dataset.category === target);
+  const mark = await marckCategorieItemMore(target);
   a[0].innerHTML = mark;
 }
 
