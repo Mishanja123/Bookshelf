@@ -1,0 +1,13 @@
+.slider-btn {
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+left: 159px;
+bottom: 24px;
+width: 38px;
+height: 38px;
+background: var(--white-cl);
+border-radius: 50%;
+border: none;
+}
