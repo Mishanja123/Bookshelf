@@ -2,7 +2,7 @@
   <div class="header-container container">
     <!-- Лого + навигация -->
     <div class="logo-wrrap">
-      <a class="logo" href="./index.html">
+      <a class="logo" href="#">
         <img
           src="/src/images/header-logo/logo.png"
           x
@@ -10,32 +10,25 @@
           height="24"
           alt="logo"
         />
+        <b class="logo-txt">Bookshelf</b>
       </a>
-      <a class="logo" href="./index.html">
-        <img
-          src="/src/images/header-logo/bookshelf-logo.png"
-          width="77"
-          height="14"
-          alt="logo"
-        />
-      </a>
-    </div>
 
-    <nav class="page-nav">
-      <ul class="nav-list">
-        <li class="nav-link">
-          <a class="link-txt current" href="./index.html">home</a>
-        </li>
-        <li class="nav-link">
-          <a class="link-txt shopp-link" href="./shopping.html">
-            shopping list
-            <!-- <svg class="shopping-icon" width="20px">
-              <use href="./images/sprite.svg#icon-bag"></use>
-            </svg> -->
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="page-nav">
+        <ul class="nav-list">
+          <li class="nav-link">
+            <a class="link-txt" id="index" href="./index.html">home</a>
+          </li>
+          <li class="nav-link">
+            <a class="link-txt" id="shopping" href="./shopping.html">
+              shopping list
+              <svg class="shopping-icon" width="20px" height="20px">
+                <use href="./images/sprite.svg#icon-bag"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- Свичер -->
     <div class="switch-burg-wrrap">
@@ -43,15 +36,22 @@
         <input type="checkbox" />
         <span class="slider round"></span>
       </label>
+      <!-- кнопка sign up -->
+      <button class="sign-up-btn" type="button">
+        Sign up
+        <svg class="sign-up-icon" width="20" height="20">
+          <use href="/src/images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
       <!-- Бургер кнопки -->
       <button type="button" class="mobile-menu-open" data-menu-open>
         <svg class="mobile-menu-open-icon" width="28" height="20">
-          <use class="burger" href="./images/sprite.svg#icon-menu-burger"></use>
+          <use class="burger" href="./images/sprite.svg#icon-menu"></use>
         </svg>
       </button>
       <button type="button" class="mobile-menu-close" data-menu-close>
-        <svg class="mobile-menu-close-icon">
-          <use class="close-icon" href="./images/sprite.svg#icon-close"></use>
+        <svg class="mobile-menu-close-icon" width="28" height="20">
+          <use class="close-icon" href="./images/sprite.svg#icon-cross"></use>
         </svg>
       </button>
     </div>
@@ -60,4 +60,35 @@
   <div class="mobile-menu" data-menu>
     <div class="mobile-menu-container container"></div>
   </div>
+
+  <script>
+    var currentPageLink = document.querySelector(
+      "a[href='" + window.location.pathname + "']"
+    );
+    if (currentPageLink) {
+      currentPageLink.classList.add('current');
+    }
+  </script>
+
+  <!-- скрипт для хедера  -->
+  <!-- <script>
+    let lastScroll = 0;
+    const defaultOffset = 30;
+    const header = document.querySelector('.header');
+
+    const scrollPosition = () =>
+      window.pageYOffset || document.documentElement.scrollTop;
+    const containHide = () => header.classList.contains('hidden');
+    window.addEventListener('scroll', () => {
+      if (scrollPosition() > lastScroll && scrollPosition() > defaultOffset) {
+        header.classList.add('hidden');
+        //scroll down
+      } else if (scrollPosition() < lastScroll && containHide()) {
+        header.classList.remove('hidden');
+        //scroll up
+      }
+
+      lastScroll = scrollPosition();
+    });
+  </script> -->
 </header>
