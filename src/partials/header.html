@@ -1,50 +1,63 @@
 <header class="header">
   <div class="header-container container">
     <!-- Лого + навигация -->
+    <div class="logo-wrrap">
+      <a class="logo" href="./index.html">
+        <img
+          src="/src/images/header-logo/logo.png"
+          x
+          width="24"
+          height="24"
+          alt="logo"
+        />
+      </a>
+      <a class="logo" href="./index.html">
+        <img
+          src="/src/images/header-logo/bookshelf-logo.png"
+          width="77"
+          height="14"
+          alt="logo"
+        />
+      </a>
+    </div>
 
     <nav class="page-nav">
-      <div class="logo-wrrap">
-        <a class="logo" href="./index.html">
-          <img
-            src="/src/images/header-logo/logo.png"
-            x
-            width="24"
-            height="24"
-            alt="logo"
-          />
-          <img src="/src/images/header-logo/" alt="logo" />
-        </a>
-      </div>
-
-      <ul class="menu-list">
-        <li class="menu-item">
-          <a href="./index.html">HOME</a>
+      <ul class="nav-list">
+        <li class="nav-link">
+          <a class="link-txt current" href="./index.html">home</a>
         </li>
-        <li class="menu-item">
-          <a href="./shopping.html">
-            <span>SHOPPING LIST</span>
-            <svg class="soc-media-icon">
+        <li class="nav-link">
+          <a class="link-txt shopp-link" href="./shopping.html">
+            shopping list
+            <!-- <svg class="shopping-icon" width="20px">
               <use href="./images/sprite.svg#icon-bag"></use>
-            </svg>
+            </svg> -->
           </a>
         </li>
       </ul>
     </nav>
 
     <!-- Свичер -->
-    <label class="switch">
-      <input type="checkbox" />
-    </label>
-    <!-- Бургер кнопки -->
-    <button type="button" class="mobile-menu-open">
-      <svg class="mobile-menu-open-icon">
-        <use class="burger" href="./images/sprite.svg#icon-burger_menu"></use>
-      </svg>
-    </button>
-    <button type="button" class="mobile-menu-close">
-      <svg class="mobile-menu-open-icon">
-        <use class="close-icon" href="./images/sprite.svg#icon-close"></use>
-      </svg>
-    </button>
+    <div class="switch-burg-wrrap">
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+      <!-- Бургер кнопки -->
+      <button type="button" class="mobile-menu-open" data-menu-open>
+        <svg class="mobile-menu-open-icon" width="28" height="20">
+          <use class="burger" href="./images/sprite.svg#icon-menu-burger"></use>
+        </svg>
+      </button>
+      <button type="button" class="mobile-menu-close" data-menu-close>
+        <svg class="mobile-menu-close-icon">
+          <use class="close-icon" href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" data-menu>
+    <div class="mobile-menu-container container"></div>
   </div>
 </header>
