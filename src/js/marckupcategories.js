@@ -110,7 +110,10 @@ export async function marckCategorieItemMore(target) {
         author = miniTitle(author)
         return `
         <li class="outlineli" data-id="${_id}">
+        <div class="book-tumb">
         <img class="book_temp" src="${book_image}" width="335" heigth="485" loading="lazy" alt="${title}">
+        <p class="book-tumb-text">quick view</p>
+        </div>
         <div class="book-info">
         <h2 class="book-info-title">${title}</h2>
         <p class="book-info-autor">${author}</p>
@@ -135,20 +138,13 @@ export async function marckModal(bookId) {
       <div class="modal-info">
       <h3 class="modal-title">${title}</h3>
       <p class="modal-author">${author}</p>
-      <p class="modal-description">${
-        description || 'Sorry, there is no description yet.'
-      }</p>
+      <p class="modal-description">${description || 'Sorry, there is no description yet.'
+    }</p>
       </div>
     </div>
   `;
-
-// <<<<<<< features/seemore
-// export function marckModal(bookId) {
-//   // const marcup =
-//     return fetchBook(bookId).then(({ data: { _id, book_image } }) => console.log(`<li>${_id}</li><img src="${book_image}>"`));
-//   // return marcup;
-// } 
-
+   modalContent.innerHTML = markup;
+}
 
 function miniTitle(string) {
   if (string.length > 18) {
@@ -157,7 +153,4 @@ function miniTitle(string) {
   else {
     return string
   }
-
-  modalContent.innerHTML = markup;
-
 }
