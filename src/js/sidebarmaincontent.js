@@ -1,11 +1,11 @@
 import {
   marckUpSideCategories,
   marckAllCategories,
-  marckCategorieItem,
+  marckCategorieItem,marckModal, marckCategorieItemMore
 } from './marckupcategories.js'
 
 const sideCategoriesList = document.querySelector('.js_side_categories_list');
-const js_books_view = document.querySelector('.js_books_view');
+const booksView = document.querySelector('.js_books_view');
 
 async function createMarckUpSideCategories() {
   const mark = await marckUpSideCategories();
@@ -15,20 +15,25 @@ createMarckUpSideCategories();
 
 async function createMarckAllCategories() {
   const mark = await marckAllCategories();
-  js_books_view.innerHTML = mark;
+  booksView.innerHTML = mark;
 }
 createMarckAllCategories();
 
-async function createMarckCategorieItem() {
-  const mark = await marckCategorieItem();
-  js_books_view.innerHTML = mark;
+async function createMarckCategorieItem(target) {
+  const mark = await marckCategorieItem(target);
+  booksView.innerHTML = mark;
+}
+
+function createModal(bookId) {
+  const mark = marckModal(bookId);
+  return mark
 }
 
 sideCategoriesList.addEventListener('click', onClick);
 
 async function onClick(e) {
   e.preventDefault();
-  target = e.target.textContent;
+  let target = e.target.textContent;
 
   if (!(e.target.tagName === 'A')) {
     return;
@@ -36,6 +41,38 @@ async function onClick(e) {
   if (target === 'All categories') {
     createMarckAllCategories();
   } else {
-    createMarckCategorieItem();
+    createMarckCategorieItem(target);
   }
 }
+booksView.addEventListener('click', onBook)
+
+ function onBook(e) {
+  // console.log(e.target);
+   try {
+    bookId = e.target.closest('.outlineli').dataset.id 
+   } catch (error) {
+     return
+   }
+  if(!bookId){
+    return
+  }
+  createModal(bookId)
+}
+
+
+// Отрисовка на кнопку See More
+// booksView.addEventListener('click', onSeeMore)
+// function onSeeMore(e) {
+//   let targetBtn = e.target.classList.contains('load-more-books')
+//   if (!targetBtn) {
+//     return
+//   }
+//   let fetchtitle = e.target.closest('.category-books').firstChild.textContent
+//   console.log(fetchtitle);
+//   createMarckCategorieItem(fetchtitle)
+// }
+// async function createMarckCategorieItem(target) {
+//   const listBooks = document.querySelector('.list-books')
+//   const mark = await marckCategorieItemMore(target)
+//   listBooks.innerHTML = mark;
+// }
