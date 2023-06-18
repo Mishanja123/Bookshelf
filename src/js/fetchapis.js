@@ -7,22 +7,26 @@ const options = {
   url: targeturl,
 };
 
-export function fetchCategoryList() {
+export async function fetchCategoryList() {
   options.url = 'category-list';
-  return axios(options).then(rep => rep.data);
+  const test = await axios(options).then(rep => rep.data);
+  return test
 }
 
-export function fetchCategory() {
+export async function fetchCategory(target) {
   options.url = `category?category=${target}`;
-  return axios(options).then(rep => rep.data);
+  const test = await axios(options).then(rep => rep.data);
+  return test
 }
 
-export function fetchBestSellers() {
+export async function fetchBestSellers() {
   options.url = 'top-books';
-  return axios(options).then(rep => rep.data);
+  const test = await axios(options).then(rep => rep.data);
+  return test
 }
 
-export function fetchBook() {
+export async function fetchBook(bookId) {
   options.url = `${bookId}`;
-  return axios(options).then(rep => rep.data);
+  const test = await axios(options).then(rep => rep)
+  return test
 }
