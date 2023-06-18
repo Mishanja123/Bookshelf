@@ -92,6 +92,12 @@ input:checked + .slider:before {
   .logo {
     padding: 18px 0px;
   }
+  .logo-txt {
+    color: var(--black-cl);
+    text-transform: none;
+    font-size: 18px;
+    font-weight: 500;
+  }
   .logo-wrrap {
     display: flex;
     align-items: center;
@@ -157,6 +163,12 @@ input:checked + .slider:before {
     align-items: center;
     gap: 8px;
     margin-right: 40px;
+  }
+  .logo-txt {
+    color: var(--black-cl);
+    text-transform: none;
+    font-size: 18px;
+    font-weight: 500;
   }
 
   .page-nav {
