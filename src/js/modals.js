@@ -14,6 +14,7 @@ const modal = document.querySelector('.modal');
 function closeModal() {
   modal.classList.remove('active');
   overlay.classList.remove('active');
+  document.body.style.overflow = ''; 
 
   closeButton.removeEventListener('click', closeModal);
   overlay.removeEventListener('click', closeModal);
@@ -40,6 +41,8 @@ function onBook(e) {
   marckModal(bookId);
   modal.classList.add('active');
   overlay.classList.add('active');
+  document.body.style.overflow = 'hidden'; 
+
 
   closeButton.addEventListener('click', closeModal);
   overlay.addEventListener('click', closeModal);
