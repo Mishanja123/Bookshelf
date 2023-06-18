@@ -1,7 +1,124 @@
 .modal {
-    width: 335px;
+    position: relative;
+    max-width: 335px;
     height: 762px;
     border: 2px solid #111111;
     border-radius: 18px;
     padding: 40px 24px;
+}
+
+.close-modal-button {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 12px;
+    height: 12px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: none;
+    background-color: transparent;
+    stroke: var(--black-cl);
+}
+
+.modal-image {
+    width: 287px;
+    height: 408px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px; 
+    letter-spacing: -0.04em;
+    margin-bottom: 4px;
+}
+
+.modal-author {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 14px; 
+    letter-spacing: -0.04em;
+    color: #B4AFAF;
+    margin-bottom: 18px;
+}
+
+.modal-description {
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.shopping-link-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+}
+
+.shopping-link-image {
+    filter: grayscale();
+}
+
+
+.add-book-button {
+    position: absolute;
+    left: 62px;
+    top: 676px;
+
+    display: block;
+    height: 46px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    background-color: var(--btn-modal);
+    padding: 14px 28px;
+
+    border: 2px solid #4F2EE8;
+    border-radius: 40px;
+}
+
+.add-book-button:hover,
+.add-book-button:focus {
+    background-color: var(--brand-color);
+    color: var(--white-cl);
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 600px) {
+.modal {
+    max-width: 579px;
+    height: 465px; 
+    padding: 40px; 
+}
+}
+
+@media screen and (min-width: 600px) {
+.add-book-button {
+    position: absolute;
+    left: 40px;
+    top: 361px;
+
+    width: 499px;
+    height: 64px;
+
+}
+}
+
+@media screen and (min-width: 600px) {
+.close-modal-button {
+    position: absolute;
+    top: 31px;
+    right: 31px;
+
+    width: 14px;
+    height: 14px;
+}
 }
