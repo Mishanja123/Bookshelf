@@ -40,7 +40,8 @@ letter-spacing: -0.04em;
  flex-direction: column;
  gap: 20px;
 }
-.support-item {
+
+.support-item.swiper-slide {
  display: flex;
  gap: 16px;
  justify-content: flex-start;
