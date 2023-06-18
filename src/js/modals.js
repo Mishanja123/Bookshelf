@@ -1,40 +1,45 @@
 import { fetchBook } from './fetchapis.js';
+import {
+  marckModal,
+  marckCategorieItem,
+  marckAllCategories,
+  marckUpSideCategories,
+} from './marckupcategories.js';
+import { booksView } from './sidebarmaincontent.js';
 
-const modalContent = document.querySelector('.modal-content');
+const overlay = document.querySelector('#overlay-modal');
+const closeButton = document.querySelector('.js-modal-close');
+const modal = document.querySelector('.modal');
 
-export async function markBooItem() {
-  const markup = await fetchBook().then(resp => {
-    console.log(resp)
-    return resp
-      .map(({ book_image, title, author, description, _id }) => {
-        return `
-        <div class="book" data-book-id="${_id}">
-        <img class="modal-image" src="${book_image}" alt="Book cover" />
-          <h3 class="modal-title">${title}</h3>
-          <p class="modal-author">${author}</p>
-          <p class="modal-description">${description}</p>
-        </div>`;
-      })
-      .join('');
-  });
-  console.log(markup);
-  return markup;
+function closeModal() {
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
 }
 
-async function createBookItem(book) {
-  const mark = await markBooItem(book);
-  modalContent.innerHTML = mark;
+function handleKeyPress(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
 }
 
-modalContent.addEventListener('click', onClick);
+booksView.addEventListener('click', onBook);
 
-async function onClick(e) {
-  e.preventDefault();
-  const target = e.target;
-  
-  if (target.classList.contains('book')) {
-  const bookId = target.dataset.bookId;
-  const book = await fetchBook(bookId);
-  createBookItem(book);
+function onBook(e) {
+  try {
+    bookId = e.target.closest('.outlineli').dataset.id;
+  } catch (error) {
+    return;
   }
+  if (!bookId) {
+    return;
   }
+  marckModal(bookId);
+  modal.classList.add('active');
+  overlay.classList.add('active');
+}
+
+closeButton.addEventListener('click', closeModal);
+
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', handleKeyPress);

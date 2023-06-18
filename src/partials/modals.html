@@ -1,19 +1,19 @@
 <div class="modal">
-  <button class="close-modal-button" type="button">
+  <button class="close-modal-button js-modal-close" type="button">
     <svg width="24" height="24">
       <use href="./images/sprite.svg#icon-close"></use>
     </svg>
   </button>
-  <div class="modal-content">
-
-  </div>
+  <div class="modal-content"></div>
   <ul class="shopping-link-list">
     <li class="shopping-link-item">
-      <a href="https://www.amazon.com/" 
-      target="_blank" 
-      rel="noreferrer noopener" 
-      class="shopping-link">
-        <image
+      <a
+        href="https://www.amazon.com/"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="shopping-link"
+      >
+        <img
           class="shopping-link-image"
           src="./images/modal-images/image1.png"
           width="62px"
@@ -23,7 +23,7 @@
     </li>
     <li class="shopping-link-item">
       <a href="" class="shopping-link">
-        <image
+        <img
           class="shopping-link-image"
           src="./images/modal-images/image2.png"
           width="33px"
@@ -33,7 +33,7 @@
     </li>
     <li class="shopping-link-item">
       <a href="" class="shopping-link">
-        <image
+        <img
           class="shopping-link-image"
           src="./images/modal-images/image3.png"
           width="38px"
@@ -45,3 +45,4 @@
   <button class="add-book-button" type="button">add to shopping list</button>
 </div>
 
+<div class="overlay" id="overlay-modal"></div>

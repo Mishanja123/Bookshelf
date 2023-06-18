@@ -1,11 +1,43 @@
 .modal {
+    opacity: 0;
+    visibility: hidden;
     position: relative;
+    width: 100%;
     max-width: 335px;
     height: 762px;
     border: 2px solid #111111;
     border-radius: 18px;
     padding: 40px 24px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    transition: 0.3s all;
+    background-color: var(--white-cl);
 }
+
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.4);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 20;
+    transition: .3s all;
+ }
+
+.modal.active,
+.overlay.active{
+    opacity: 1;
+    visibility: visible;
+ }
 
 .close-modal-button {
     position: absolute;
@@ -36,6 +68,7 @@
     line-height: 18px; 
     letter-spacing: -0.04em;
     margin-bottom: 4px;
+    color: var(--black-cl);
 }
 
 .modal-author {
@@ -45,13 +78,17 @@
     letter-spacing: -0.04em;
     color: #B4AFAF;
     margin-bottom: 18px;
+    text-transform: none;
 }
 
 .modal-description {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 14px;
     line-height: 18px;
     letter-spacing: -0.04em;
-    text-align: left;
-    margin-bottom: 14px;
+    color: var(--black-cl);
+    text-transform: none;
 }
 
 .shopping-link-list {
@@ -98,9 +135,7 @@
     height: 465px; 
     padding: 40px; 
 }
-}
 
-@media screen and (min-width: 600px) {
 .add-book-button {
     position: absolute;
     left: 40px;
@@ -108,11 +143,8 @@
 
     width: 499px;
     height: 64px;
-
-}
 }
 
-@media screen and (min-width: 600px) {
 .close-modal-button {
     position: absolute;
     top: 31px;
@@ -121,4 +153,34 @@
     width: 14px;
     height: 14px;
 }
+
+.modal-image {
+    width: 192px;
+    height: 281px;
 }
+
+.book {
+    display: flex;
+    gap: 24px;
+}
+
+.shopping-link-list {
+    position: absolute;
+    left: 256px;
+    top: 204px;
+}
+.modal-title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 8px;
+}
+.modal-author {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+.modal-description {
+    margin-bottom: 20px;
+}
+}
+
