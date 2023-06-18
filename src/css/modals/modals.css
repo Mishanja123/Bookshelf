@@ -55,6 +55,11 @@
     stroke: var(--black-cl);
 }
 
+.close-modal-button:hover,
+.close-modal-button:focus {
+    stroke: var(--brand-color);  
+}
+
 .modal-image {
     width: 287px;
     height: 408px;
@@ -102,7 +107,11 @@
 .shopping-link-image {
     filter: grayscale();
 }
-
+.shopping-link:hover,
+.shopping-link:focus {
+mix-blend-mode: luminosity;
+filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
 
 .add-book-button {
     position: absolute;

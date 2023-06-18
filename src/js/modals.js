@@ -14,6 +14,10 @@ const modal = document.querySelector('.modal');
 function closeModal() {
   modal.classList.remove('active');
   overlay.classList.remove('active');
+
+  closeButton.removeEventListener('click', closeModal);
+  overlay.removeEventListener('click', closeModal);
+  document.removeEventListener('keydown', handleKeyPress);
 }
 
 function handleKeyPress(event) {
@@ -36,10 +40,11 @@ function onBook(e) {
   marckModal(bookId);
   modal.classList.add('active');
   overlay.classList.add('active');
+
+  closeButton.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+  document.addEventListener('keydown', handleKeyPress);
+  closeButton.removeEventListener('click', onBook);
+  overlay.removeEventListener('click', onBook);
 }
 
-closeButton.addEventListener('click', closeModal);
-
-overlay.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', handleKeyPress);
