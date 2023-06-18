@@ -1,8 +1,8 @@
 .categories-list {
   margin: 40px 0;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 14px;
   height: 228px;
   overflow-y: scroll;
   width: 335px;
@@ -24,6 +24,7 @@
 }
 
 .categories-list li a {
+  padding: 5px 0;
   text-decoration: none;
   text-transform: capitalize;
   font-family: 'DM Sans';
@@ -42,7 +43,7 @@
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -52,6 +53,9 @@
 
 .book_temp {
   border-radius: 8px;
+  width: 335px;
+  height: 485px;
+  object-fit: cover;
 }
 
 .category_title_last_word {
@@ -65,6 +69,186 @@
 }
 
 .outlineli {
-  display: inline-block;
-  outline: 1px solid red
+  width: 335px;
 }
+
+
+.title_categories{
+font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+
+  /* identical to box height, or 119% */
+  letter-spacing: -0.04em;
+
+  color: #111111;
+
+}
+
+.js_books_view{
+      display: flex;
+   flex-direction: column;
+  padding-top: 40px;
+  row-gap: 40px;
+}
+
+.adition-category-title{
+  font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  
+    /* identical to box height, or 129% */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: #B4AFAF;
+    margin-bottom: 18px;
+}
+
+/* .category-books{
+  padding-bottom: 40px;
+} */
+
+.book-info{
+  padding-top: 14px;
+  padding-bottom: 8px;
+}
+.book-info-title{
+  font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  
+    /* identical to box height, or 112% */
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  
+    color: #111111;
+}
+.book-info-autor{
+  font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  
+    /* identical to box height, or 117% */
+    letter-spacing: -0.04em;
+  
+    color: #B4AFAF;
+}
+.load-more-books{
+  display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 14px 28px;
+    gap: 10px;
+    border: 2px solid #4F2EE8;
+      border-radius: 40px;
+      font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+      
+        /* identical to box height, or 129% */
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+      
+        color: #111111;
+            margin: 0 0 0 auto;
+}
+
+.list-books li:nth-child(n+2){
+  display: none;
+
+}
+@media (min-width: 768px) {
+.list-books {
+    display: flex;
+        gap: 25px;
+  }
+  .categories-list {
+      gap: 22px;
+      height: 472px;
+      width: 337px;
+    }
+  .list-books li:nth-child(-n+3) {
+      display: block;
+    }
+    .book_temp{
+      width: 218px;
+        height: 316px;
+    }
+        .outlineli {
+          width: 218px;
+        }
+        .js_books_view{
+          /* max-width: 968px; */
+          display: flex;
+            flex-wrap: wrap;
+            gap: 40px 25px;
+            flex-direction: row;
+        }
+        .category-books{
+          padding-bottom: 0;
+        }
+}
+@media (min-width: 1440px) {
+
+  .categories-list {
+      gap: 22px;
+      height: 472px;
+      width: 356px;
+      display: inline-flex;
+    }
+  .list-books li:nth-child(n) {
+    display: block;
+
+  }
+  .book_temp{
+    width: 180px;
+      height: 256px;
+  }
+
+    .outlineli {
+      width: 180px;
+    }
+  
+    .list-books {
+      display: flex;
+      gap: 24px;
+    }
+        .categories-list li a:hover {
+
+          font-size: 15px;
+
+        }
+                .wrapper-categories-box {
+                  margin-left: 40px;
+                  display: inline-flex;
+                  flex-direction: column;
+                  max-width: 990px;
+                }
+                .js_books_view{
+display: flex;
+  flex-wrap: wrap;
+  /* row-gap: 40px; */
+  gap:40px 24px;
+                }
+.js_books_view li {
+  flex-basis: calc((100% - 96px) / 5);
+}
+.list-books li {
+  flex-basis: calc((100% - 96px) / 5);
+}
+        .category-books {
+          padding-bottom: 0px;
+        }
+}
+
