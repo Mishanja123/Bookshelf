@@ -1,4 +1,9 @@
-import { fetchCategoryList, fetchBestSellers, fetchCategory, fetchBook} from './fetchapis.js';
+import {
+  fetchCategoryList,
+  fetchBestSellers,
+  fetchCategory,
+  fetchBook,
+} from './fetchapis.js';
 
 const titleCategories = document.querySelector('.title_categories');
 
@@ -35,11 +40,13 @@ export function marckAllCategories() {
           ` <li class="category-books"><h2 class="adition-category-title">${list_name}</h2><ul class="list-books" data-category="${list_name}">` +
           books
             .map(
+
               ({ book_image = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.freepik.com%2Fpremium-psd%2Fblank-cover-book-mockup_6814948.htm&psig=AOvVaw1pv5Qa3fm2txSvUlVovAqz&ust=1687133787207000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKCwj6LFy_8CFQAAAAAdAAAAABAF', author = 'anonymous author', title = 'book without title', description, _id }) => {
                 title = miniTitle(title)
                 author = miniTitle(author)
                 return `<li class="outlineli hidde" data-id="${_id}">
                 <div class="book-tumb">
+
                 <img class="book_temp" src="${book_image}" width="335" heigth="485" loading="lazy" alt="${title}">
                 <p class="book-tumb-text">quick view</p>
                 </div>
@@ -64,6 +71,7 @@ export function marckAllCategories() {
 export function marckCategorieItem(target) {
   const marcup = fetchCategory(target).then(resp => {
     return resp
+
       .map(({ list_name, book_image  = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.freepik.com%2Fpremium-psd%2Fblank-cover-book-mockup_6814948.htm&psig=AOvVaw1pv5Qa3fm2txSvUlVovAqz&ust=1687133787207000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKCwj6LFy_8CFQAAAAAdAAAAABAF', title  = 'book without title', author  = 'anonymous author', description, _id }) => {
         const startTitle = list_name
           .split(' ')
@@ -74,6 +82,7 @@ export function marckCategorieItem(target) {
         const endTitle = list_name.split(' ')[list_name.split(' ').length - 1];
         titleCategories.innerHTML = `${startTitle} <span class="category_title_last_word">${endTitle}<span>`;
         return `
+
         <li class="outlineli" data-id="${_id}">
         <div class="book-tumb">
         <img class="book_temp" src="${book_image}" width="335" heigth="485" loading="lazy" alt="${title}">
@@ -84,9 +93,11 @@ export function marckCategorieItem(target) {
         <p class="book-info-autor">${author}</p>
         </div>
         </li>`;
-      })
+        }
+      )
       .join('');
   });
+
   return marcup;
 }
 
@@ -111,14 +122,32 @@ export async function marckCategorieItemMore(target) {
   return marcup;
 }
 
+const modalContent = document.querySelector('.modal-content');
 
+export async function marckModal(bookId) {
+  const {
+    data: { book_image, title, author, description, _id },
+  } = await fetchBook(bookId);
 
+  const markup = `
+    <div class="book" data-book-id="${_id}">
+      <img class="modal-image" src="${book_image}" alt="Book cover" />
+      <div class="modal-info">
+      <h3 class="modal-title">${title}</h3>
+      <p class="modal-author">${author}</p>
+      <p class="modal-description">${
+        description || 'Sorry, there is no description yet.'
+      }</p>
+      </div>
+    </div>
+  `;
 
-export function marckModal(bookId) {
-  // const marcup =
-    return fetchBook(bookId).then(({ data: { _id, book_image } }) => console.log(`<li>${_id}</li><img src="${book_image}>"`));
-  // return marcup;
-} 
+// <<<<<<< features/seemore
+// export function marckModal(bookId) {
+//   // const marcup =
+//     return fetchBook(bookId).then(({ data: { _id, book_image } }) => console.log(`<li>${_id}</li><img src="${book_image}>"`));
+//   // return marcup;
+// } 
 
 
 function miniTitle(string) {
@@ -128,4 +157,7 @@ function miniTitle(string) {
   else {
     return string
   }
+
+  modalContent.innerHTML = markup;
+
 }

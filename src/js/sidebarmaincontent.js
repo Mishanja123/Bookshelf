@@ -5,7 +5,7 @@ import {
 } from './marckupcategories.js'
 
 const sideCategoriesList = document.querySelector('.js_side_categories_list');
-const booksView = document.querySelector('.js_books_view');
+export const booksView = document.querySelector('.js_books_view');
 
 async function createMarckUpSideCategories() {
   const mark = await marckUpSideCategories();
