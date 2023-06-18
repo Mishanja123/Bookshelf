@@ -11,8 +11,6 @@
 @import url('./common/main-btn.css');
 @import url('./common/slider-btn.css');
 
-
-
 /* Main page */
 @import url('./header.css');
 @import url('./home-page/home-page.css');
@@ -22,35 +20,48 @@
 /* Modals */
 @import url('./modals/modals.css');
 
-
 :root {
-    --brand-color:#4f2ee8;
-    --white-cl:#FFFFFF;
-    --black-cl:#111111;
-  
+  --brand-color: #4f2ee8;
+  --white-cl: #ffffff;
+  --black-cl: #111111;
 
-    /*Text*/
-    --main-light-txt-cl:#11111199; /*60%*/
-    --main-dark-txt-cl: #ffffff99; /*60%*/
-    --modal-txt:#11111180;
-    --modal-txt-dark:#f6f6f680; /*50%*/
-    --name-section-txt:#B4AFAF;
-    --blank-shopping-list:#00000099; /*60%*/
-    --edit-sl-dark:#ffffff80; /*50%*/
-    
-    /* --modal-light-txt-cl:;
+  /*Text*/
+  --main-light-txt-cl: #11111199; /*60%*/
+  --main-dark-txt-cl: #ffffff99; /*60%*/
+  --modal-txt: #11111180; /*50%*/
+  --modal-txt-dark: #f6f6f680; /*50%*/
+  --name-section-txt: #b4afaf;
+  --blank-shopping-list: #00000099; /*60%*/
+  --edit-sl-dark: #ffffff80; /*50%*/
+  --shadow: #00000026; /*15%*/
+  /* --modal-light-txt-cl:;
     --modal-dark-txt-cl:; */
 
+  /*Buttons*/
+  /*--btn-border-cl:#4F2EE8;*/
+  --btn-modal: #f3f3f3;
+  --btn-modal-dark: #202024;
+  --btn-switch-theme: linear-gradient(rgb(255, 255, 255), rgb(247, 247, 247));
+  --scroll: #e0e0e0;
+  --scroll-up: #4f2ee84d; /*30%*/
 
-      /*Buttons*/
-    /*--btn-border-cl:#4F2EE8;*/
-    --btn-modal:#F3F3F3;
-    --btn-modal-dark:#202024;
-    --btn-switch-theme:linear-gradient(rgb(255, 255, 255), rgb(247, 247, 247));
-    --scroll:#E0E0E0
+  --hover-light-cl:#4F2EE8;
+  --hover-dark-cl: #eac645;
 
+  /* Background */
+  --main-light-bg: #f6f6f6;
+  --main-dark-bg: #202024;
+  --shopping-list: #11111166; /*40%*/
+  --switch-light-theme: linear-gradient(rgb(79, 46, 232), rgb(220, 220, 220));
+  --switch-dark-theme: linear-gradient(rgb(79, 46, 232), rgb(104, 104, 104));
+  --gradient: radial-gradient(
+    at top right,
+    rgb(79, 46, 232),
+    rgb(255, 255, 255)
+  );
+  --shadow-header: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    /*--hover-light-cl:#4F2EE8;*/
+    --hover-light-cl:#4F2EE8;
     --hover-dark-cl:#EAC645;
 
 
@@ -64,10 +75,10 @@
     --gradient: radial-gradient(at top right,rgb(79, 46, 232),rgb(255, 255, 255));
 
 
-    /* Other */
-    --z-index-header: 999;
-    --z-index-hero-cont: 1;
-    --z-index-rating-mark-block: 2;
+   
+  /* Other */
+  --z-index-header: 999;
+  --z-index-hero-cont: 1;
+  --z-index-rating-mark-block: 2;
+  --transit: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
