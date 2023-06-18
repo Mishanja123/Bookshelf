@@ -41,7 +41,7 @@ letter-spacing: -0.04em;
  gap: 20px;
 }
 
-.support-item.swiper-slide {
+.support-item {
  display: flex;
  gap: 16px;
  justify-content: flex-start;
