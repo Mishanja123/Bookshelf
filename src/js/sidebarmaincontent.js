@@ -43,11 +43,12 @@ async function onClick(e) {
   } else {
     createMarckCategorieItem(target);
   }
+  ([...e.currentTarget.children]).map(el => el.classList.remove('selected-category'))
+  e.target.parentNode.classList.add('selected-category')
 }
 booksView.addEventListener('click', onBook)
 
  function onBook(e) {
-  // console.log(e.target);
    try {
     bookId = e.target.closest('.outlineli').dataset.id 
    } catch (error) {
@@ -61,18 +62,29 @@ booksView.addEventListener('click', onBook)
 
 
 // Отрисовка на кнопку See More
-// booksView.addEventListener('click', onSeeMore)
-// function onSeeMore(e) {
-//   let targetBtn = e.target.classList.contains('load-more-books')
-//   if (!targetBtn) {
-//     return
-//   }
-//   let fetchtitle = e.target.closest('.category-books').firstChild.textContent
-//   console.log(fetchtitle);
-//   createMarckCategorieItem(fetchtitle)
-// }
-// async function createMarckCategorieItem(target) {
-//   const listBooks = document.querySelector('.list-books')
-//   const mark = await marckCategorieItemMore(target)
-//   listBooks.innerHTML = mark;
-// }
+booksView.addEventListener('click', onSeeMore)
+function onSeeMore(e) {
+  let targetBtn = e.target.classList.contains('load-more-books')
+  if (!targetBtn) {
+    return
+  }
+  let fetchtitle = e.target.closest('.category-books').firstChild.textContent
+  console.log(fetchtitle); 
+  createMarckCategorieItemMore(fetchtitle)
+  e.target.classList.add('no-btn')
+  ([...e.target.previousSibling.children]).map(el => el.classList.remove('hidden'))
+}
+
+async function createMarckCategorieItemMore(target) {
+  const listBooks = document.querySelectorAll('.list-books')
+  const a = ([...listBooks]).filter(el => el.dataset.category === target)
+  const mark = await marckCategorieItemMore(target)
+  a[0].innerHTML = mark;
+}
+
+
+
+
+
+
+
