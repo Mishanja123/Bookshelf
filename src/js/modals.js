@@ -43,7 +43,6 @@ function onBook(e) {
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden'; 
 
-
   closeButton.addEventListener('click', closeModal);
   overlay.addEventListener('click', closeModal);
   document.addEventListener('keydown', handleKeyPress);
@@ -51,3 +50,13 @@ function onBook(e) {
   overlay.removeEventListener('click', onBook);
 }
 
+// const addButton = document.querySelector('.add-book-button');
+// addButton.addEventListener('click', changeBtnText);
+
+// function changeBtnText() {
+//     if (this.textContent === 'add to shopping list') {
+//       this.textContent = 'remove from the shopping list';
+//     } else {
+//       this.textContent = 'Add to shopping list';
+//     } return
+//   };
