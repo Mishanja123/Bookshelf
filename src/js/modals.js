@@ -10,6 +10,7 @@ const overlay = document.querySelector('#overlay-modal');
 const closeButton = document.querySelector('.js-modal-close');
 const modal = document.querySelector('.modal');
 const modalContent = document.querySelector('.modal-content');
+let bookId = ''
 function closeModal() {
   modal.classList.remove('active');
   overlay.classList.remove('active');
