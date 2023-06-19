@@ -10,6 +10,7 @@ const overlay = document.querySelector('#overlay-modal');
 const closeButton = document.querySelector('.js-modal-close');
 const modal = document.querySelector('.modal');
 const modalContent = document.querySelector('.modal-content');
+let bookId = ''
 function closeModal() {
   modal.classList.remove('active');
   overlay.classList.remove('active');
@@ -43,6 +44,23 @@ async function onBook(e) {
   }
   await createMarckModal(bookId);
 
+//   closeButton.addEventListener('click', closeModal);
+//   overlay.addEventListener('click', closeModal);
+//   document.addEventListener('keydown', handleKeyPress);
+//   closeButton.removeEventListener('click', onBook);
+//   overlay.removeEventListener('click', onBook);
+// }
+
+// const addButton = document.querySelector('.add-book-button');
+// addButton.addEventListener('click', changeBtnText);
+
+// function changeBtnText() {
+//     if (this.textContent === 'add to shopping list') {
+//       this.textContent = 'remove from the shopping list';
+//     } else {
+//       this.textContent = 'Add to shopping list';
+//     } return
+//   };
   async function addClass() {
     modal.classList.add('active');
     overlay.classList.add('active');
