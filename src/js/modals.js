@@ -1,4 +1,3 @@
-import { fetchBook } from './fetchapis.js';
 import {
   marckModal,
   marckCategorieItem,
@@ -10,11 +9,11 @@ import { booksView } from './sidebarmaincontent.js';
 const overlay = document.querySelector('#overlay-modal');
 const closeButton = document.querySelector('.js-modal-close');
 const modal = document.querySelector('.modal');
-
+const modalContent = document.querySelector('.modal-content');
 function closeModal() {
   modal.classList.remove('active');
   overlay.classList.remove('active');
-  document.body.style.overflow = ''; 
+  document.body.style.overflow = '';
 
   closeButton.removeEventListener('click', closeModal);
   overlay.removeEventListener('click', closeModal);
@@ -27,9 +26,13 @@ function handleKeyPress(event) {
   }
 }
 
+async function createMarckModal(bookId) {
+  const mark = await marckModal(bookId);
+  modalContent.innerHTML = mark;
+}
 booksView.addEventListener('click', onBook);
 
-function onBook(e) {
+async function onBook(e) {
   try {
     bookId = e.target.closest('.outlineli').dataset.id;
   } catch (error) {
@@ -38,16 +41,18 @@ function onBook(e) {
   if (!bookId) {
     return;
   }
-  marckModal(bookId);
-  modal.classList.add('active');
-  overlay.classList.add('active');
-  document.body.style.overflow = 'hidden'; 
+  await createMarckModal(bookId);
 
+  async function addClass() {
+    modal.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
 
-  closeButton.addEventListener('click', closeModal);
-  overlay.addEventListener('click', closeModal);
-  document.addEventListener('keydown', handleKeyPress);
-  closeButton.removeEventListener('click', onBook);
-  overlay.removeEventListener('click', onBook);
+    closeButton.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+    document.addEventListener('keydown', handleKeyPress);
+    closeButton.removeEventListener('click', onBook);
+    overlay.removeEventListener('click', onBook);
+  }
+  addClass();
 }
-
