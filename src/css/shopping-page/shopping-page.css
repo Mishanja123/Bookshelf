@@ -1,0 +1,306 @@
+/* тут трохи фантазії як змоделювати блок Саппорт, коли буде
+готовий, стилі трохи підкорегуються */
+
+@media screen and (min-width: 1440px) {
+  .shopping-container {
+    max-width: 1044px;
+  }
+
+  .shopping-section {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.support-container {
+  width: 300px;
+  height: 490px;
+  background-color: #465fdd;
+}
+
+.shopping-container {
+  text-transform: none;
+}
+
+.shopping-header {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+
+  letter-spacing: -0.04em;
+
+  color: #111111;
+
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .shopping-header {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+.accent {
+  color: var(--brand-color);
+}
+
+.shopping-description-block {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+
+  max-width: 265px;
+}
+
+@media screen and (min-width: 768px) {
+  .shopping-description-block {
+    gap: 20px;
+
+    padding-top: 100px;
+
+    max-width: 349px;
+  }
+}
+
+.shopping-description {
+  font-weight: 400;
+  line-height: 18px;
+
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  max-width: 244px;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  .shopping-description {
+    font-size: 18px;
+    line-height: 24px;
+
+    max-width: 349px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 335px;
+}
+
+@media screen and (min-width: 768px) {
+  .shopping-list {
+    max-width: 704px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .shopping-list {
+    min-width: 996px;
+  }
+}
+
+.shopping-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  max-height: 170px;
+
+  padding: 14px;
+
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .shopping-item {
+    gap: 24px;
+    max-height: 213px;
+
+    padding: 24px;
+  }
+}
+
+.shopping-card-thumb {
+  max-width: 100px;
+  max-height: 142px;
+}
+
+@media screen and (min-width: 768px) {
+  .shopping-card-thumb {
+    max-width: 116px;
+    max-height: 165px;
+  }
+}
+
+.shopping-card-content {
+  position: relative;
+}
+.book-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+
+  padding-bottom: 4px;
+
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+.book-category {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  letter-spacing: 0.03em;
+  padding-bottom: 8px;
+
+  color: #b4afaf;
+}
+
+@media screen and (min-width: 768px) {
+  .book-category {
+    padding-bottom: 14px;
+  }
+}
+
+.book-description {
+  display: block;
+
+  font-weight: 400;
+
+  line-height: 18px;
+
+  letter-spacing: -0.04em;
+
+  max-width: 190px;
+  max-height: 68px;
+
+  color: #111111;
+}
+
+@media screen and (min-width: 768px) {
+  .book-description {
+    max-width: 508px;
+    max-height: 53px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .book-description {
+    max-width: 808px;
+  }
+}
+
+.cut-text {
+  max-height: 53px;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+}
+
+.book-author {
+  position: absolute;
+  bottom: 0;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  letter-spacing: -0.04em;
+
+  color: #b4afaf;
+}
+
+.buy-links-list {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  max-width: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .buy-links-list {
+    gap: 16px;
+    max-width: 140px;
+  }
+}
+
+.buy-links-item {
+  mix-blend-mode: luminosity;
+}
+
+.buy-links-item:hover {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+.delete-button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 24px;
+  height: 24px;
+
+  background-color: var(--brand-color);
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: background-color, var(--transit);
+}
+
+@media screen and (min-width: 768px) {
+  .delete-button {
+    top: 24px;
+    right: 24px;
+
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+.delete-button:hover,
+.delete-button:focus {
+  background-color: #401be2;
+}
