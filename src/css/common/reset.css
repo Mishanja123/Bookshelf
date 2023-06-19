@@ -19,6 +19,7 @@ img {
     font-size: 0;
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 
