@@ -1,10 +1,26 @@
 const refs = {
-    articlesContainer: document.querySelector('shopping-list'),
+  articlesContainer: document.querySelector('.shopping-list'),
+  descriptionBlock: document.querySelector('.shopping-description-block'),
+  deleteBtn: document.querySelector('.delete-button'),
+};
 
+refs.deleteBtn.addEventListener('click', clearArticleContainer)
+
+function fetchData(books) {
+    if (books === []) {
+      refs.descriptionBlock.classList.remove('visually-hidden');
+    return;
+  }
+  refs.descriptionBlock.classList.add('visually-hidden');
+  appendArticleMarkup(books);
 }
 
 function appendArticleMarkup(books) {
   refs.articlesContainer.insertAdjacentHTML('beforeend', createMarkup(books));
+}
+
+function clearArticleContainer() {
+  refs.articlesContainer.innerHTML = '';
 }
 
 function createMarkup(books) {
@@ -31,7 +47,7 @@ function createMarkup(books) {
                 <ul class="buy-links-list list">
                     <li class="buy-links-item">
                          <a
-                            href="${book.buy-links[0]}"
+                            href="${book.buy - links[0]}"
                             class="buy-link"
                         >
                             <img
@@ -44,7 +60,7 @@ function createMarkup(books) {
                     </li>
                     <li class="buy-links-item">
                         <a
-                         href="${book.buy-links[1]}"
+                         href="${book.buy - links[1]}"
                             class="buy-link"
                          >
                             <img
@@ -57,7 +73,7 @@ function createMarkup(books) {
                     </li>
                     <li class="buy-links-item">
                          <a
-                            href="${book.buy-links[2]}"
+                            href="${book.buy - links[2]}"
                             class="buy-link"
                         >
                             <img
