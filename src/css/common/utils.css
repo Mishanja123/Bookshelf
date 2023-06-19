@@ -74,14 +74,14 @@
 }
 
 .slider-button {
-    color: currentColor;
+    /* color: currentColor;
 
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
 
     line-height: inherit;
-    letter-spacing: inherit;
+    letter-spacing: inherit; */
 
     cursor: pointer;
 

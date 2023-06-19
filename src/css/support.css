@@ -1,3 +1,7 @@
+.sup-wrap {
+    padding-top: 24px;
+    padding-left: 40px;
+}
 .support-block {
     position: relative;
     width: 335px;
@@ -6,7 +10,7 @@
     border-radius: 10px;
     background: radial-gradient(183.6% 183.01% at 59.76% -23.42%,
             var(--hover-light-cl) 18.03%,
-            var(--white-cl) 100%);
+            var(--yellow-cl)89%);
 }
 
 .support-block,
@@ -65,20 +69,30 @@ color: var(--white-cl);
 .support-img-09 {
     width: 81px;
 }
-
-.support-title {
+.support-heading {
     display: flex;
-    justify-content: center;
+    gap: 12px;
     align-items: center;
+    margin-bottom: 40px;
+    
+}
+.support-title {
+    text-transform: none;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     font-weight: 700;
     font-size: 28px;
     line-height: 1.14;
-    margin-bottom: 40px;
-    padding-top: 24px;
+    letter-spacing: -0.04em;
+    /* margin-bottom: 40px; */
+    /* gap: 12px; */
+    /* padding-top: 24px; */
 }
 
-.support-title img {
-    margin-left: 12px;
+.support-title  {
+  
+    /* margin-left: 12px; */
 }
 
 .support-svg {
@@ -86,6 +100,10 @@ color: var(--white-cl);
     height: 5.98px;
     width: 11.67px;
     fill: var(--hover-light-cl);
+}
+.svg-threzub {
+    width: 27px;
+    height: 39px;
 }
 
 .support-button {
@@ -110,7 +128,7 @@ color: var(--white-cl);
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-left: 40px;
+  
     margin-bottom: 15px;
 }
 
