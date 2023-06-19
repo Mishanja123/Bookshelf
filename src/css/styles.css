@@ -16,6 +16,7 @@
 @import url('./home-page/home-page.css');
 @import url('./shopping-page/shopping-page.css');
 @import url('./support.css');
+@import url('./footer.css');
 /* Modals */
 @import url('./modals/modals.css');
 
@@ -44,7 +45,7 @@
   --scroll: #e0e0e0;
   --scroll-up: #4f2ee84d; /*30%*/
 
-  --hover-light-cl:#4F2EE8;
+  --hover-light-cl: #4f2ee8;
   --hover-dark-cl: #eac645;
 
   /* Background */
@@ -60,21 +61,21 @@
   );
   --shadow-header: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    --hover-light-cl:#4F2EE8;
-    --hover-dark-cl:#EAC645;
+  --hover-light-cl: #4f2ee8;
+  --hover-dark-cl: #eac645;
 
+  /* Background */
+  --main-light-bg: #f6f6f6;
+  --main-dark-bg: #202024;
+  --shopping-list: #11111166; /*40%*/
+  --switch-light-theme: linear-gradient(rgb(79, 46, 232), rgb(220, 220, 220));
+  --switch-dark-theme: linear-gradient(rgb(79, 46, 232), rgb(104, 104, 104));
+  --gradient: radial-gradient(
+    at top right,
+    rgb(79, 46, 232),
+    rgb(255, 255, 255)
+  );
 
-
-    /* Background */
-    --main-light-bg: #F6F6F6;
-    --main-dark-bg:#202024;
-    --shopping-list:#11111166; /*40%*/
-    --switch-light-theme: linear-gradient(rgb(79, 46, 232), rgb(220, 220, 220));
-    --switch-dark-theme: linear-gradient(rgb(79, 46, 232), rgb(104, 104, 104));
-    --gradient: radial-gradient(at top right,rgb(79, 46, 232),rgb(255, 255, 255));
-
-
-   
   /* Other */
   --z-index-header: 999;
   --z-index-hero-cont: 1;
