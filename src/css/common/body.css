@@ -2,8 +2,11 @@
 body {
     font-family: 'DM Sans', sans-serif;
     color: var(--main-dark-txt-cl);
+    font-weight: 400;
     font-size: 14px;
+    line-height: calc(18 / 14);
     text-transform: uppercase;
+    letter-spacing: -0.04em;
 
     background-color: var(--main-light-bg);
 }
