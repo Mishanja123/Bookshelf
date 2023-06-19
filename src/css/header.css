@@ -255,3 +255,105 @@ input:checked + .slider:before {
     margin-right: 739px;
   } */
 }
+
+/*mobile-menu*/
+.mobile-menu-container{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.account {
+  display: flex;
+  align-items: center;
+}
+
+/*.photo {}*/
+
+.account-name {
+  font-style: normal;
+  margin-left: 9px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 29px;
+  letter-spacing: -0.02em;
+  color: var(--white-cl);
+  text-transform: none;
+}
+
+.link-pages {
+  margin-top: 126px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ /* margin-bottom: auto;*/
+}
+
+.home-item,.shopping-item{
+  list-style: none;
+  margin-bottom: 16px;
+}
+.home-item:hover,
+.home-item:focus,
+.shopping-item:hover,
+.shopping-item:focus {
+background-color: var(--hover-dark-cl);
+border-radius: 36px;
+padding: 8px 16px;
+color: var(--black-cl);
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+}
+
+.home-list {
+  color: var(--white-cl);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.home-list:hover,
+.home-list:focus,
+.shopping-list:hover,
+.shopping-list:focus {
+  color: var(--black-cl);  
+}
+
+.shopping-list {
+color: var(--white-cl);
+letter-spacing: -.04em;
+text-transform: uppercase;
+align-items: flex-end;
+gap: 4px;
+margin-top: 0;
+font-size: 14px;
+font-weight: 500;
+line-height: 1.29;
+display: flex;
+}
+.icon-bag {
+  fill: #fff;
+}
+
+.icon-bag:hover,
+.icon-bag:focus {
+  fill: var(--black-cl);
+}
+
+.log-btn {
+  padding: 14px 24px;
+  background: #ffffff;
+  border: 1.5px solid var(--black-cl);
+  border-radius: 18px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-top: 250px;
+}
+
+.background {
+  background-image: url('/src/images/books.png'), var(--gradient);
+  background-position: top 250px right 0px, top 1px right 1px;
+  background-repeat: no-repeat;
+}
