@@ -44,7 +44,7 @@ async function onSubmit(e) {
   const password = e.currentTarget.password.value
   
     try {
-    let loginResponse = await createUser(email, password);
+    let loginResponse = await signInUser(email, password);
     startSession(loginResponse.user);
       console.log(loginResponse);
       onToggleModal()
