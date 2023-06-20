@@ -5,8 +5,13 @@
   top: 0;
   left: 0;
 
+ /* border: 1.5px solid var(--black-cl);
+  border-radius: 0px 0px 8px 8px;*/
+}
+
+.header-container{
   border: 1.5px solid var(--black-cl);
-  border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 8px 8px;
 }
 
 .logo {
