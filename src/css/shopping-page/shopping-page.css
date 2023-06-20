@@ -3,7 +3,7 @@
 
 @media screen and (min-width: 1440px) {
   .shopping-container {
-    max-width: 1044px;
+    /* display: flex; */
   }
 
   .shopping-section {
