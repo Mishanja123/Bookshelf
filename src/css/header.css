@@ -226,7 +226,7 @@ input:checked + .slider:before {
     margin-left: auto;
   }
 
-  .current {
+  /* .current {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,7 +234,16 @@ input:checked + .slider:before {
     border-radius: 36px;
 
     font-weight: 700;
-  }
+  } */
+    .nav-link-selected a{
+      display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eac645;
+        border-radius: 36px;
+      
+        font-weight: 700;
+    }
   .shopp-link.current {
     width: 156px;
     height: 34px;
