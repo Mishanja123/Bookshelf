@@ -3,12 +3,7 @@
     <!-- Лого + навигация -->
     <div class="logo-wrrap">
       <a class="logo" href="/src/index.html">
-        <img
-          src="/src/images/header-logo/logo.png"
-          width="24"
-          height="24"
-          alt="logo"
-        />
+        <img src="/src/images/header-logo/logo.png" width="24" height="24" alt="logo" />
         <b class="logo-txt">Bookshelf</b>
       </a>
 
@@ -31,8 +26,8 @@
 
     <!-- Свичер -->
     <div class="switch-burg-wrrap">
-      <label class="switch">
-        <input type="checkbox" />
+      <label class="switch theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
         <span class="slider round"></span>
       </label>
       <!-- Кнопка sign up -->
@@ -77,8 +72,7 @@
           <a class="home-list" href="index.html">Home</a>
         </li>
         <li class="shopping-item">
-          <a class="shopping-list" href="./shopping.html"
-            >Shopping list
+          <a class="shopping-list" href="./shopping.html">Shopping list
             <svg class="icon-bag" width="20" height="20">
               <use href="./images/sprite.svg#icon-bag" />
             </svg>
@@ -106,6 +100,38 @@
     if (currentURL === '/shopping.html') {
       indexHtml.classList.remove('current');
       shoppingHtml.classList.add('current');
+    }
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }
+
+    toggleSwitch.addEventListener('change', switchTheme, false);
+    // store user preference for future visits
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); //add this
+      }
+      else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); //add this
+      }
+    }
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
     }
   </script>
 
