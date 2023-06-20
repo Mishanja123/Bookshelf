@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     max-width: 335px;
-    /* height: 762px; */
+    max-height: 806px;
     border: 2px solid #111111;
     border-radius: 18px;
     padding: 40px 24px;
@@ -162,7 +162,7 @@
 @media screen and (min-width: 600px) {
 .modal {
     max-width: 579px;
-    /* height: 465px;  */
+    max-height: 501px; 
     padding: 40px; 
 }
 
