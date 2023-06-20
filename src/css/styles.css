@@ -10,6 +10,7 @@
 @import url('./common/utils.css');
 @import url('./common/main-btn.css');
 @import url('./common/slider-btn.css');
+@import url('./common/loader.css');
 
 /* Main page */
 @import url('./header.css');
@@ -19,6 +20,7 @@
 @import url('./footer.css');
 /* Modals */
 @import url('./modals/modals.css');
+
 
 :root {
   --brand-color: #4f2ee8;
@@ -77,13 +79,17 @@
     rgb(255, 255, 255)
   );
 
+
+
   /* Other */
   --z-index-header: 999;
   --z-index-hero-cont: 1;
   --z-index-rating-mark-block: 2;
   --transit: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --loader: #4f2ee8;
 }
 [data-theme="dark"] {
+  --loader: #ffffff;
   --brand-color: #4f2ee8;
     --white-cl: #111111;
     --black-cl: #ffffff;
