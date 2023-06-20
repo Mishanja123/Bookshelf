@@ -1,3 +1,6 @@
+.catygories-and-support{
+  padding-bottom: 40px;
+}
 .categories-list {
   margin: 0 0 40px 0;
   display: inline-flex;
@@ -176,12 +179,18 @@
 }
 
 @media (min-width: 768px) {
+  .catygories-and-support {
+    display: flex;
+    gap: 32px;
+    padding-bottom: 100px;
+  }
   .categories-list {
     gap: 22px;
     height: 472px;
     width: 337px;
     margin-bottom: 100px;
-    }
+    margin-bottom: 0;
+  }
   .list-books {
     gap: 40px 25px;
   }
@@ -207,6 +216,14 @@
   }
 }
 @media (min-width: 1440px) {
+  .catygories-support-books{
+    display: flex;
+  }
+  .catygories-and-support {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0px;
+  }
   .categories-list {
     gap: 22px;
     height: 472px;
