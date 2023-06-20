@@ -40,7 +40,7 @@
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
-  color: var(--brand-color);
+  color: var(--hover-light-cl);
 }
 
 .book_temp {
@@ -130,7 +130,7 @@
 .load-more-books:hover, 
 .load-more-books:focus {
   color: var(--white-cl);
-  background: var(--brand-color);
+  background: var(--hover-light-cl);
 }
 
 .list-books .hidde:nth-child(n+2){
@@ -146,7 +146,7 @@
 .book-tumb-text{
   position: absolute;
   bottom: 0;
-  background: var(--hover-dark-cl);
+  background: var(--hover-light-cl);
   display: flex;
   width: 100%;
   justify-content: center;
