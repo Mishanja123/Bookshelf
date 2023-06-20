@@ -48,23 +48,6 @@ if (
     }
     await createMarckModal(bookId);
 
-    //   closeButton.addEventListener('click', closeModal);
-    //   overlay.addEventListener('click', closeModal);
-    //   document.addEventListener('keydown', handleKeyPress);
-    //   closeButton.removeEventListener('click', onBook);
-    //   overlay.removeEventListener('click', onBook);
-    // }
-
-    // const addButton = document.querySelector('.add-book-button');
-    // addButton.addEventListener('click', changeBtnText);
-
-    // function changeBtnText() {
-    //     if (this.textContent === 'add to shopping list') {
-    //       this.textContent = 'remove from the shopping list';
-    //     } else {
-    //       this.textContent = 'Add to shopping list';
-    //     } return
-    //   };
     async function addClass() {
       modal.classList.add('active');
       overlay.classList.add('active');
@@ -79,3 +62,13 @@ if (
     addClass();
   }
 }
+
+
+// booksView.addEventListener('click',  changeBtnText);
+// function changeBtnText() {
+//   if (this.textContent === 'add to shopping list') {
+//     this.textContent = 'remove from the shopping list';
+//   } else {
+//     this.textContent = 'add to shopping list';
+//   } return
+// };
