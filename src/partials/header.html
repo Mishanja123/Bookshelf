@@ -2,10 +2,9 @@
   <div class="header-container container">
     <!-- Лого + навигация -->
     <div class="logo-wrrap">
-      <a class="logo" href="#">
+      <a class="logo" href="/src/index.html">
         <img
           src="/src/images/header-logo/logo.png"
-          x
           width="24"
           height="24"
           alt="logo"
@@ -16,10 +15,10 @@
       <nav class="page-nav">
         <ul class="nav-list">
           <li class="nav-link">
-            <a class="link-txt" id="index" href="./index.html">home</a>
+            <a class="link-txt" id="index" href="/src/index.html">home</a>
           </li>
           <li class="nav-link">
-            <a class="link-txt" id="shopping" href="./shopping.html">
+            <a class="link-txt" id="shopping" href="/src/shopping.html">
               shopping list
               <svg class="shopping-icon" width="20px" height="20px">
                 <use href="./images/sprite.svg#icon-bag"></use>
@@ -36,13 +35,23 @@
         <input type="checkbox" />
         <span class="slider round"></span>
       </label>
-      <!-- кнопка sign up -->
-      <button class="sign-up-btn" type="button">
+      <!-- Кнопка sign up -->
+      <button type="button" class="sign-up-btn">
         Sign up
         <svg class="sign-up-icon" width="20" height="20">
           <use href="/src/images/sprite.svg#icon-arrow"></use>
         </svg>
       </button>
+      <!-- Кнопка с инфой юзера  -->
+      <!-- <button type="button" class="user-info-btn">
+        <svg class="" width="37" height="37">
+          <use href="/src/images/sprite.svg#"></use>
+        </svg>
+        <b>...</b>
+        <svg class="" width="23" height="26">
+          <use href="/src/images/sprite.svg#"></use>
+        </svg>
+      </button> -->
       <!-- Бургер кнопки -->
       <button type="button" class="mobile-menu-open" data-menu-open>
         <svg class="mobile-menu-open-icon" width="28" height="20">
@@ -62,11 +71,17 @@
   </div>
 
   <script>
-    var currentPageLink = document.querySelector(
-      "a[href='" + window.location.pathname + "']"
-    );
-    if (currentPageLink) {
-      currentPageLink.classList.add('current');
+    const indexHtml = document.getElementById('index');
+    const shoppingHtml = document.getElementById('shopping');
+    const currentURL = window.location.pathname;
+
+    if (currentURL === '/index.html') {
+      shoppingHtml.classList.remove('current');
+      indexHtml.classList.add('current');
+    }
+    if (currentURL === '/shopping.html') {
+      indexHtml.classList.remove('current');
+      shoppingHtml.classList.add('current');
     }
   </script>
 
