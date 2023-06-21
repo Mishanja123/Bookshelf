@@ -5,6 +5,9 @@ import {
   marckUpSideCategories,
 } from './marckupcategories.js';
 import { booksView } from './sidebarmaincontent.js';
+import { fetchBook } from './fetchapis.js';
+import { addToLocalStorage } from './firebase/addLocal.js'
+const modalCardBtn = document.querySelector('.add-book-button');
 
 const overlay = document.querySelector('#overlay-modal');
 const closeButton = document.querySelector('.js-modal-close');
@@ -66,4 +69,29 @@ async function onBook(e) {
     overlay.removeEventListener('click', onBook);
   }
   addClass();
+}
+
+
+
+modalCardBtn.addEventListener('click', onClickBtnAddCard);
+
+  console.log(modalCardBtn);
+  function onClickBtnAddCard() {
+ const booksId = document.querySelector('.book');
+    const id = booksId.getAttribute('data-book-id');
+
+    fetchBook(id)
+      .then(({ book_image, title, author, description, _id, list_name, buy_links }) => {
+        const bookCard = {
+          book_image,
+          title,
+          author,
+          description,
+          _id,
+          list_name,
+         buy_links
+        };
+        addToLocalStorage(bookCard)
+        // modalCardBtn.textContent = 'remove from the shopping list'
+      });
 }
