@@ -54,17 +54,12 @@
     
     border: none;
     background-color: transparent;
-    /* stroke: var(--black-cl); */
+    stroke: var(--black-cl);
 }
-
-  .close-modal-button svg {
-    fill: var(--black-cl);
-    transition: fill var(--transit);
-  } 
   
-  .close-modal-button:hover svg,
-  .close-modal-button:focus svg{
-    fill: var(--brand-color); 
+  .close-modal-button:hover,
+  .close-modal-button:focus{
+    stroke: var(--brand-color); 
   }
 
 .modal-image {
