@@ -1,5 +1,7 @@
 .scroll-up {
-    display: block;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     width: 54px;
     height: 54px;
     background: #4f2ee8;
