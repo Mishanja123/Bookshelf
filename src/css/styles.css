@@ -11,6 +11,7 @@
 @import url('./common/main-btn.css');
 @import url('./common/slider-btn.css');
 @import url('./common/loader.css');
+@import url('./common/scrollup.css');
 
 /* Main page */
 @import url('./header.css');
