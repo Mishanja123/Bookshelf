@@ -1,22 +1,24 @@
 import './js/support.js';
 import './js/mobile-menu.js';
+import './css/shopping-page/support-shoping-page.css'
 import { createMarkup } from './js/rendershoppinglist';
 import { marckModal } from './js/marckupcategories.js'
 
-(() => {
-  const supportBlock = document.querySelector('.support-block');
 
-  // Close the mobile menu on wider screens if the device orientation changes
+// (() => {
+//   const supportBlock = document.querySelector('.support-block');
 
-  window.matchMedia('(min-width: 1440px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    supportBlock.style.display = 'block';
-  });
-  window.matchMedia('(max-width: 1440px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    supportBlock.style.display = 'none';
-  });
-})();
+//   // Close the mobile menu on wider screens if the device orientation changes
+
+//   window.matchMedia('(min-width: 1440px)').addEventListener('change', e => {
+//     if (!e.matches) return;
+//     supportBlock.style.display = 'block';
+//   });
+//   window.matchMedia('(max-width: 1440px)').addEventListener('change', e => {
+//     if (!e.matches) return;
+//     supportBlock.style.display = 'none';
+//   });
+// })();
 
 
 
@@ -71,3 +73,5 @@ function onClickShoppingItem(e) {
 function onClickCardShopping() {
 marckModal(bookId)
 }
+
+
