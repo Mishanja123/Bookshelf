@@ -31,8 +31,8 @@
 
     <!-- Свичер -->
     <div class="switch-burg-wrrap">
-      <label class="switch">
-        <input type="checkbox" />
+      <label class="switch theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
         <span class="slider round"></span>
       </label>
       <!-- Кнопка sign up -->
@@ -71,7 +71,7 @@
     </div>
   </div>
 
-  <!-- <script>
+  <script>
     const indexHtml = document.getElementById('index');
     const shoppingHtml = document.getElementById('shopping');
     const currentURL = window.location.pathname;
@@ -84,7 +84,42 @@
       indexHtml.classList.remove('current');
       shoppingHtml.classList.add('current');
     }
-  </script> -->
+
+    const toggleSwitch = document.querySelector(
+      '.theme-switch input[type="checkbox"]'
+    );
+
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }
+
+    toggleSwitch.addEventListener('change', switchTheme, false);
+    // store user preference for future visits
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); //add this
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); //add this
+      }
+    }
+    const currentTheme = localStorage.getItem('theme')
+      ? localStorage.getItem('theme')
+      : null;
+
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
+  </script>
 
   <!-- скрипт для хедера  -->
   <!-- <script>

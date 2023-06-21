@@ -44,13 +44,6 @@ async function onBook(e) {
   }
   await createMarckModal(bookId);
 
-//   closeButton.addEventListener('click', closeModal);
-//   overlay.addEventListener('click', closeModal);
-//   document.addEventListener('keydown', handleKeyPress);
-//   closeButton.removeEventListener('click', onBook);
-//   overlay.removeEventListener('click', onBook);
-// }
-
 // const addButton = document.querySelector('.add-book-button');
 // addButton.addEventListener('click', changeBtnText);
 
