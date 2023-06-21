@@ -82,7 +82,8 @@
     rgb(255, 255, 255)
   );
 
-
+  --white: #fff;
+  --drk: #111211
 
   /* Other */
   --z-index-header: 999;

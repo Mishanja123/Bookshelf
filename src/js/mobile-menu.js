@@ -1,3 +1,5 @@
+const { Loading } = require('notiflix');
+
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
@@ -12,10 +14,10 @@
     burger.classList.toggle(`cross-burger`);
     burger.nextElementSibling.classList.toggle(`cross-burger`);
 
-    const scrollLockMethod = !isMenuOpen
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
-    bodyScrollLock[scrollLockMethod](document.body);
+    // const scrollLockMethod = !isMenuOpen
+    //   ? 'disableBodyScroll'
+    //   : 'enableBodyScroll';
+    // bodyScrollLock[scrollLockMethod](document.body);
   };
 
   openMenuBtn.addEventListener('click', toggleMenu);
@@ -25,6 +27,25 @@
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
-    bodyScrollLock.enableBodyScroll(document.body);
+    document.body.classList.remove('mt');
+    burger.classList.toggle(`cross-burger`);
+    burger.nextElementSibling.classList.toggle(`cross-burger`);
   });
 })();
+
+const navLink = document.querySelectorAll('.nav-link');
+const sL = document.querySelector('.shopping-section');
+
+if (sL) {
+  navLink[1].classList.toggle('nav-selected');
+} else {
+  navLink[0].classList.toggle('nav-selected');
+}
+
+const navLinkM = document.querySelectorAll('.nav-link-m');
+
+if (sL) {
+  navLinkM[1].classList.toggle('nav-selected-m');
+} else {
+  navLinkM[0].classList.toggle('nav-selected-m');
+}
