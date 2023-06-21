@@ -52,6 +52,9 @@
           <use href="/src/images/sprite.svg#"></use>
         </svg>
       </button> -->
+
+
+
       <!-- Бургер кнопки -->
       <button
         type="button"
@@ -59,8 +62,11 @@
         aria-controls="mobile-menu"
         aria-expanded="false"
       >
-        <svg class="mobile-menu-open-icon" width="28" height="28">
+        <svg class="mobile-menu-open-icon burger" width="28" height="28">
           <use class="burger" href="./images/sprite.svg#icon-menu"></use>
+        </svg>
+        <svg class="mobile-menu-open-icon cross-burger" width="28" height="28">
+          <use href="./images/sprite.svg#icon-cross"></use>
         </svg>
       </button>
       <button type="button" class="mobile-menu-close" data-menu-close>
@@ -70,6 +76,21 @@
       </button>
     </div>
   </div>
+
+
+
+  <!-- <div class="mobile-menu-open js-open-menu" id="mobile-menu">
+    <button class=" js-close-menu modal-order-box-btn">
+      <svg class="mobile-menu-open-icon" width="28" height="28">
+        <use class="burger" href="./images/sprite.svg#icon-menu"></use>
+      </svg>
+    </button>
+  
+    <ul class="mobile-menu">
+      <li><a href="#" class="nav-link link">Portfolio</a></li>
+      <li><a href="" class="nav-link link">Contacts</a></li>
+    </ul>
+  </div> -->
 
   <script>
     const indexHtml = document.getElementById('index');
@@ -120,26 +141,4 @@
       }
     }
   </script>
-
-  <!-- скрипт для хедера  -->
-  <!-- <script>
-    let lastScroll = 0;
-    const defaultOffset = 30;
-    const header = document.querySelector('.header');
-
-    const scrollPosition = () =>
-      window.pageYOffset || document.documentElement.scrollTop;
-    const containHide = () => header.classList.contains('hidden');
-    window.addEventListener('scroll', () => {
-      if (scrollPosition() > lastScroll && scrollPosition() > defaultOffset) {
-        header.classList.add('hidden');
-        //scroll down
-      } else if (scrollPosition() < lastScroll && containHide()) {
-        header.classList.remove('hidden');
-        //scroll up
-      }
-
-      lastScroll = scrollPosition();
-    });
-  </script> -->
 </header>
