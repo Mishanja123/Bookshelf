@@ -140,10 +140,17 @@
 @media screen and (min-width: 768px) {
   .shopping-item {
     gap: 24px;
+    min-width: 704px;
     max-height: 213px;
 
     padding: 24px;
   }
+}
+
+@media screen and (min-width: 1440px) {
+.shopping-item {
+   min-width: 996px;
+}
 }
 
 .shopping-card-thumb {

@@ -64,6 +64,7 @@
 }
 
 .title_categories{
+  text-transform: capitalize;
   font-size: 32px;
   line-height: 38px;
   letter-spacing: -0.04em;

@@ -153,8 +153,9 @@ input:checked + .slider:before {
   }
 
   .mobile-menu-close {
+    stroke: var(--black-cl);
     display: none;
-    background-color: transparent;
+    /* background-color: transparent; */
     border: none;
   }
 
