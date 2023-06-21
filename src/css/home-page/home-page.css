@@ -179,7 +179,20 @@
   flex-wrap: wrap;
 }
 
+.book-loader {
+  --color: var(--loader);
+  --duration: 6.8s;
+  width: 32px;
+  height: 12px;
+  position: relative;
+  margin: 70px auto;
+  zoom: 1.5;
+}
+
 @media (min-width: 768px) {
+  .book-loader {
+      margin: 40px auto;
+    }
   .catygories-and-support {
     display: flex;
     gap: 32px;
@@ -274,9 +287,8 @@
   }
   .wrap {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 50px;
+    margin: 0 auto;
   }
 }
 

@@ -7,16 +7,16 @@ import {
 } from './marckupcategories.js';
 
 const sideCategoriesList = document.querySelector('.js_side_categories_list');
-const loader = document.querySelector('.wrap')
-const categoriesTitle = document.querySelector('.title_categories')
+const loader = document.querySelector('.wrap');
+const categoriesTitle = document.querySelector('.title_categories');
 
 function addLoader() {
-  loader.classList.remove('hidden')
-  categoriesTitle.classList.add('hidden')
+  loader.classList.remove('hidden');
+  categoriesTitle.classList.add('hidden');
 }
 function removeLoader() {
-  loader.classList.add('hidden')
-  categoriesTitle.classList.remove('hidden')
+  loader.classList.add('hidden');
+  categoriesTitle.classList.remove('hidden');
 }
 
 export const booksView = document.querySelector('.js_books_view');
@@ -28,20 +28,20 @@ async function createMarckUpSideCategories() {
 createMarckUpSideCategories();
 
 async function createMarckAllCategories() {
-  booksView.innerHTML = ''
-  addLoader()
+  booksView.innerHTML = '';
+  addLoader();
   const mark = await marckAllCategories();
   booksView.innerHTML = mark;
-  removeLoader()
+  removeLoader();
 }
 createMarckAllCategories();
 
 async function createMarckCategorieItem(target) {
-  booksView.innerHTML = ''
-  addLoader()
+  booksView.innerHTML = '';
+  addLoader();
   const mark = await marckCategorieItem(target);
   booksView.innerHTML = mark;
-  removeLoader()
+  removeLoader();
 }
 
 function createModal(bookId) {
