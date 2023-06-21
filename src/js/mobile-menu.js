@@ -24,12 +24,16 @@ const { Loading } = require('notiflix');
 
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-    if (!e.matches) return;
+    if (!e.matches) { 
+      return;
+    } 
     mobileMenu.classList.remove('is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
     document.body.classList.remove('mt');
-    burger.classList.toggle(`cross-burger`);
-    burger.nextElementSibling.classList.toggle(`cross-burger`);
+    if(burger.classList.contains((`cross-burger`))){
+      burger.classList.toggle(`cross-burger`);
+      burger.nextElementSibling.classList.toggle(`cross-burger`)
+    }
   });
 })();
 
