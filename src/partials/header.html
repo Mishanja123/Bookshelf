@@ -3,7 +3,12 @@
     <!-- Лого + навигация -->
     <div class="logo-wrrap">
       <a class="logo" href="/src/index.html">
-        <img src="/src/images/header-logo/logo.png" width="24" height="24" alt="logo" />
+        <img
+          src="/src/images/header-logo/logo.png"
+          width="24"
+          height="24"
+          alt="logo"
+        />
         <b class="logo-txt">Bookshelf</b>
       </a>
 
@@ -48,41 +53,19 @@
         </svg>
       </button> -->
       <!-- Бургер кнопки -->
-      <button type="button" class="mobile-menu-open" data-menu-open>
-        <svg class="mobile-menu-open-icon" width="28" height="20">
+      <button
+        type="button"
+        class="mobile-menu-open js-open-menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <svg class="mobile-menu-open-icon" width="28" height="28">
           <use class="burger" href="./images/sprite.svg#icon-menu"></use>
         </svg>
       </button>
       <button type="button" class="mobile-menu-close" data-menu-close>
         <svg class="mobile-menu-close-icon" width="28" height="20">
           <use class="close-icon" href="./images/sprite.svg#icon-cross"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <div class="mobile-menu background" data-menu>
-    <div class="mobile-menu-container container">
-      <div class="account">
-        <img class="photo" src="./images/stephen.png" alt="accouunt-photo" />
-        <p class="account-name">Stephen</p>
-      </div>
-      <nav class="link-pages">
-        <li class="home-item">
-          <a class="home-list" href="index.html">Home</a>
-        </li>
-        <li class="shopping-item">
-          <a class="shopping-list" href="./shopping.html">Shopping list
-            <svg class="icon-bag" width="20" height="20">
-              <use href="./images/sprite.svg#icon-bag" />
-            </svg>
-          </a>
-        </li>
-      </nav>
-      <button class="log-btn">
-        Log out
-        <svg width="13" height="10">
-          <use href="./images/sprite.svg#icon-arrow" />
         </svg>
       </button>
     </div>
@@ -101,13 +84,15 @@
       indexHtml.classList.remove('current');
       shoppingHtml.classList.add('current');
     }
-    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+    const toggleSwitch = document.querySelector(
+      '.theme-switch input[type="checkbox"]'
+    );
 
     function switchTheme(e) {
       if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
-      }
-      else {
+      } else {
         document.documentElement.setAttribute('data-theme', 'light');
       }
     }
@@ -118,13 +103,14 @@
       if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark'); //add this
-      }
-      else {
+      } else {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light'); //add this
       }
     }
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    const currentTheme = localStorage.getItem('theme')
+      ? localStorage.getItem('theme')
+      : null;
 
     if (currentTheme) {
       document.documentElement.setAttribute('data-theme', currentTheme);

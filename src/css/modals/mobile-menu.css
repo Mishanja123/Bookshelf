@@ -1,0 +1,226 @@
+/*mobile-menu*/
+/* .mobile-menu-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+    width: 100vh;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+}
+
+
+.account-name {
+    font-style: normal;
+    margin-left: 9px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    color: var(--white-cl);
+    text-transform: none;
+}
+
+.mobile-nav {
+    margin-top: 126px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.nav-list {
+    color: var(--white-cl);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+.nav-list:hover,
+.nav-list:focus,
+.shopping-list:hover,
+.shopping-list:focus {
+    color: var(--black-cl);
+}
+
+.nav-item,
+.shopping-item {
+    list-style: none;
+    margin-bottom: 16px;
+} */
+/* .nav-item:hover,
+.nav-item:focus,
+.shopping-item:hover,
+.shopping-item:focus {
+    background-color: var(--hover-dark-cl);
+    border-radius: 36px;
+    padding: 8px 16px;
+    color: var(--black-cl);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+} */
+
+/* 
+
+.shopping-list {
+    color: var(--white-cl);
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+    align-items: flex-end;
+    gap: 4px;
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    display: flex;
+}
+
+.icon-bag {
+    fill: #fff;
+}
+
+.icon-bag:hover,
+.icon-bag:focus {
+    fill: var(--black-cl);
+}
+
+.log-btn {
+
+    margin-top: 250px;
+}
+
+.background {
+    background-image: url('/src/images/mobile-menu/books.png'), var(--gradient);
+    background-position: top 250px right 0px, top 1px right 1px;
+    background-repeat: no-repeat;
+} */
+@media screen and (min-width: 320px) {
+.menu-container {
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: var(--z-index-modal);
+    min-height: 100%;
+    width: 100%;
+    padding: 20px;
+    
+    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%,
+                var(--brand-color) 18.03%,
+                var(--main-light-bg) 100%);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+    
+}
+
+.menu-container::before {
+    content: '';
+    position: absolute;
+    
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    background-image: url(/src/images/mobile-menu/books.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu-container.is-open {
+    display: block;
+}
+.nav-mobile {
+    margin-top: 126px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: auto;
+}
+
+.nav-list-mobile {
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    gap: 17; */
+
+    /* width: 140px; */
+    /* margin-top: 255px; */
+    /* margin-left: auto;
+    margin-right: auto; */
+
+    /* font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    letter-spacing: -0.04em;
+    text-transform: uppercase; */
+    color: var(--white-cl);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+}
+
+.icon-shop-mobile {
+    position: absolute;
+    bottom: 0px;
+    left: 85px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    fill: var(--header-bg-color-light);
+}
+
+.button-mobile {
+    display: none;
+    width: 184px;
+    height: 45px;
+    margin-top: 84px;
+    background: transparent;
+
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.text-log-user {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+
+    color: #ffffff;
+}
+
+.button-log-out-mobile {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    width: 118px;
+    height: 48px;
+    left: 20px;
+    top: 630px;
+
+    background: var(--white-cl);
+    border: 1.5px solid var(--black-cl);
+    border-radius: 18px;
+}
+
+.text-log-mobile {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+
+    
+}
+}
