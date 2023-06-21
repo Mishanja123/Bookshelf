@@ -14,7 +14,7 @@
     transform: translate(-50%, -50%);
     z-index: 30;
     transition: var(--transit);
-    background-color: var(--white-cl);
+    background-color: var(--btn-modal);
 }
 
 .overlay {
@@ -131,9 +131,10 @@
     padding: 14px 28px;
     margin-bottom: 8px;
     margin: auto;
-    background-color: var(--white-cl);
+    background-color: var(--btn-modal);
     border: 2px solid var(--brand-color);
     border-radius: 40px;
+    color: var(--black-cl);
 }
 
 .add-book-button:hover,

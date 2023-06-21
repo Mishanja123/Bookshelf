@@ -29,7 +29,7 @@
 
   letter-spacing: -0.04em;
 
-  color: #111111;
+  color: var(--black-cl);
 
   margin-bottom: 40px;
 }

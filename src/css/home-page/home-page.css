@@ -147,7 +147,7 @@
 .book-tumb-text{
   position: absolute;
   bottom: 0;
-  background: var(--hover-light-cl);
+  background: var(--hover-dark-cl);
   display: flex;
   width: 100%;
   justify-content: center;
@@ -162,7 +162,7 @@
   line-height: 18px;
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  color: var(--black-cl);
+  color: var(--white);
 }
 
 .outlineli:hover .book-tumb-text,

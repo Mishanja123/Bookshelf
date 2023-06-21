@@ -27,7 +27,9 @@ const { Loading } = require('notiflix');
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
-    // bodyScrollLock.enableBodyScroll(document.body);
+    document.body.classList.remove('mt');
+    burger.classList.toggle(`cross-burger`);
+    burger.nextElementSibling.classList.toggle(`cross-burger`);
   });
 })();
 
@@ -38,4 +40,12 @@ if (sL) {
   navLink[1].classList.toggle('nav-selected');
 } else {
   navLink[0].classList.toggle('nav-selected');
+}
+
+const navLinkM = document.querySelectorAll('.nav-link-m');
+
+if (sL) {
+  navLinkM[1].classList.toggle('nav-selected-m');
+} else {
+  navLinkM[0].classList.toggle('nav-selected-m');
 }
