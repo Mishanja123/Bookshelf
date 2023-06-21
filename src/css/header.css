@@ -17,6 +17,7 @@
 .shopping-icon{
 fill: white;
 }
+
 .nav-selected-m {
   display: inline-flex;
   align-items: center;
@@ -183,6 +184,22 @@ input:checked + .slider:before {
 
 /* TABLET */
 @media screen and (min-width: 768px) {
+  .nav-selected a{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #eac645;
+      border-radius: 36px;
+      font-weight: 700;
+      color: black;
+    }
+        .shopping-icon {
+          fill: var(--black-cl);
+        }
+    .nav-selected .shopping-icon {
+      fill: black;
+    }
+        
   .mobile-menu-open,
   .mobile-menu-close {
     display: none;
