@@ -54,15 +54,16 @@
     
     border: none;
     background-color: transparent;
+    /* stroke: var(--black-cl); */
 }
 
-.close-modal-button svg {
+  .close-modal-button svg {
     fill: var(--black-cl);
     transition: fill var(--transit);
-  }
+  } 
   
   .close-modal-button:hover svg,
-  .close-modal-button:focus svg {
+  .close-modal-button:focus svg{
     fill: var(--brand-color); 
   }
 
@@ -111,6 +112,7 @@
     padding: 0px;
     gap: 20px;
     margin-bottom: 40px;
+   
 }
 
 .shopping-link-image {
@@ -164,13 +166,14 @@
 @media screen and (min-width: 600px) {
 .modal {
     max-width: 579px;
+    height: 100%;
     max-height: 501px; 
     padding: 40px; 
     overflow-y: auto;
 }
 
 .add-book-button {
-    width: 499px;
+    width: 495px;
     height: 64px;
 }
 
@@ -197,6 +200,7 @@
     position: absolute;
     left: 256px;
     top: 229px;
+    overflow-x: hidden;
 }
 .modal-title {
     font-size: 24px;
