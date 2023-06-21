@@ -14,8 +14,10 @@ function scrollFunction() {
 }
 
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth",
+})
 }
 
 btn.addEventListener('click', topFunction)
