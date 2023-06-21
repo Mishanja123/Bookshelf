@@ -1,15 +1,4 @@
 
-
-.book-loader {
-    --color: var(--loader);
-    --duration: 6.8s;
-    width: 32px;
-    height: 12px;
-    position: relative;
-    margin: 32px 0 0 0;
-    zoom: 1.5;
-}
-
 .book-loader .inner {
     width: 32px;
     height: 12px;
