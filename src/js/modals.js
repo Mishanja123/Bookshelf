@@ -75,7 +75,6 @@ async function onBook(e) {
 
 modalCardBtn.addEventListener('click', onClickBtnAddCard);
 
-  console.log(modalCardBtn);
   function onClickBtnAddCard() {
  const booksId = document.querySelector('.book');
     const id = booksId.getAttribute('data-book-id');
