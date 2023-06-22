@@ -1,22 +1,39 @@
 <div class="js-backdrop-login backdrop_login">
   <div class="modal_login">
-    <button class="modal_login-close"><svg class="modal_login-close__svg">
-      <use href="./images/sprite.svg#icon-cross"></use>
-    </svg></button>
+    <button class="modal_login-close">
+      <svg class="modal_login-close__svg">
+        <use href="./images/sprite.svg#icon-cross"></use>
+      </svg>
+    </button>
     <form class="login_form">
-   <div class="login_input-block"><input class="login-input" name="name" placeholder="name" type="text">
-  </div> 
-   <div class="login_input-block"><input class="login-input" name="email" placeholder="email" type="email">
-    <svg class="login_input-svg" >
-      <use href="./images/sprite.svg#icon-email"></use>
-    </svg>
-  </div> 
-   <div class="login_input-block"><input class="login-input" name="password" placeholder="password" type="password">
-    <svg class="login_input-svg">
-      <use href="./images/sprite.svg#icon-password"></use>
-    </svg>
-  </div> 
-    <button type="submit" class="login_btn-form">Sign up</button>
+      <div class="login_input-block">
+        <input class="login-input" name="name" placeholder="name" type="text" />
+      </div>
+      <div class="login_input-block">
+        <input
+          class="login-input"
+          name="email"
+          placeholder="email"
+          type="email"
+          id="txtEmail"
+        />
+        <svg class="login_input-svg">
+          <use href="./images/sprite.svg#icon-email"></use>
+        </svg>
+      </div>
+      <div class="login_input-block">
+        <input
+          class="login-input"
+          name="password"
+          placeholder="password"
+          type="password"
+          id="txtPsw"
+        />
+        <svg class="login_input-svg">
+          <use href="./images/sprite.svg#icon-password"></use>
+        </svg>
+      </div>
+      <button type="submit" class="login_btn-form">Sign up</button>
     </form>
     <div class="sign_block">
       <span class="sign-up sing">sign up</span>
@@ -24,3 +41,5 @@
     </div>
   </div>
 </div>
+
+<!-- Инициализация Firebase -->

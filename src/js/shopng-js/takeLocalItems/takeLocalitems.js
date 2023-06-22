@@ -3,6 +3,7 @@ import { refs } from '../DOM-refs/refs-DOM.js'; // i.a.
 import { createMarkup } from '../takeLocalItems/filter-local';
 import { createMarkup } from '../../rendershoppinglist';
 
+
 export const takeLocalItems = () => {
   const getLocalStorage = localStorage.getItem('bookCard');
   const parseLocalStorage = JSON.parse(getLocalStorage);
