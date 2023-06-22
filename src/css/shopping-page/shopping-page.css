@@ -167,6 +167,7 @@
 
 .shopping-card-content {
   position: relative;
+  width: 100%;
 }
 .book-title {
   font-weight: 700;
@@ -304,10 +305,25 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-}
+
 
 .delete-button:hover,
 .delete-button:focus {
   background-color: #401be2;
+}
+
+.remove-card-img{
+  width: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .remove-card-img{
+  width: 14px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+  .remove-card-img{
+  width: 16px;
+}
 }
