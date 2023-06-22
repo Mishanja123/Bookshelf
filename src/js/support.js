@@ -36,3 +36,9 @@ function onScrollBtn() {
   
   isScrolledToEnd = !isScrolledToEnd;
 };
+
+
+if (document.querySelector('.shopping-header')) {
+  const a = document.querySelector('.support-block')
+  a.classList.add('support-block-n')
+}

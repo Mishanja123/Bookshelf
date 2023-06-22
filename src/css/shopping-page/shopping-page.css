@@ -76,7 +76,7 @@
 
   max-width: 244px;
 
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--black-cl);
 }
 
 @media screen and (min-width: 768px) {
@@ -132,9 +132,9 @@
 
   padding: 14px;
 
-  border: 2px solid rgba(79, 46, 232, 0.4);
+  border: 2px solid #4f2ee866;
   border-radius: 16px;
-  background: #ffffff;
+  background: var(--white-cl);
 }
 
 @media screen and (min-width: 768px) {
@@ -179,7 +179,7 @@
   letter-spacing: -0.04em;
   text-transform: uppercase;
 
-  color: #111111;
+  color: var(--black-cl);
 }
 
 .book-category {
@@ -190,7 +190,7 @@
   letter-spacing: 0.03em;
   padding-bottom: 8px;
 
-  color: #b4afaf;
+  color: var(--name-section-txt);
 }
 
 @media screen and (min-width: 768px) {
@@ -211,7 +211,7 @@
   max-width: 190px;
   max-height: 68px;
 
-  color: #111111;
+  color: var(--black-cl);
 }
 
 @media screen and (min-width: 768px) {
@@ -246,7 +246,7 @@
 
   letter-spacing: -0.04em;
 
-  color: #b4afaf;
+  color: var(--name-section-txt);
 }
 
 .buy-links-list {

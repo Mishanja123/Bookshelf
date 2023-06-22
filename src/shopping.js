@@ -1,6 +1,10 @@
 import './js/support';
 import './js/mobile-menu.js';
-import { marckModal } from './js/marckupcategories.js';
+
+import './css/shopping-page/support-shoping-page.css'
+import { createMarkup } from './js/rendershoppinglist';
+import { marckModal } from './js/marckupcategories.js'
+
 import { refs } from './js/shopng-js/DOM-refs/refs-DOM.js';
 import {
   takeLocalItems,
@@ -8,20 +12,21 @@ import {
 } from './js/shopng-js/takeLocalItems/takeLocalitems.js';
 import { filteredLocalItems } from './js/shopng-js/takeLocalItems/filter-local.js';
 
-(() => {
-  const supportBlock = document.querySelector('.support-block');
 
-  // Close the mobile menu on wider screens if the device orientation changes
+// (() => {
+//   const supportBlock = document.querySelector('.support-block');
 
-  window.matchMedia('(min-width: 1440px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    supportBlock.style.display = 'block';
-  });
-  window.matchMedia('(max-width: 1440px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    supportBlock.style.display = 'none';
-  });
-})();
+//   // Close the mobile menu on wider screens if the device orientation changes
+
+//   window.matchMedia('(min-width: 1440px)').addEventListener('change', e => {
+//     if (!e.matches) return;
+//     supportBlock.style.display = 'block';
+//   });
+//   window.matchMedia('(max-width: 1440px)').addEventListener('change', e => {
+//     if (!e.matches) return;
+//     supportBlock.style.display = 'none';
+//   });
+// })();
 
 
 refs.cardRemoveBtn.addEventListener('click', onRemoveCard);
@@ -89,4 +94,21 @@ async function onClickShoppingItem(e) {
     e.target.parentNode.remove();
     localStorageCheck();
   }
+
+
+
+      if (parseLocalStorage === []) {
+        refs.descriptionBlock.classList.toggle('visually-hidden');
+    }
 }
+
+
+// !MODALSHOPPING
+
+function onClickCardShopping() {
+marckModal(bookId)
+}
+
+
+}
+
