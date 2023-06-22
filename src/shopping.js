@@ -90,7 +90,11 @@ async function onClickShoppingItem(e) {
     localStorageCheck();
   }
 
-  if (parseLocalStorage === []) {
+  // if (parseLocalStorage === []) {
+  //   refs.descriptionBlock.classList.toggle('visually-hidden');
+  // }
+
+  if (takeLocalItems().length === 0) {
     refs.descriptionBlock.classList.toggle('visually-hidden');
   }
 }
