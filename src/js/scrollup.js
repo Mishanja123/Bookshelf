@@ -4,7 +4,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-    btn.style.display = "block";
+    btn.style.display = "flex";
     btn.classList.add("show");
   } else {
     btn.style.display = "none";
