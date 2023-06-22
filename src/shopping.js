@@ -31,14 +31,10 @@ refs.cardRemoveBtn.addEventListener('click', onRemoveCard);
 function onRemoveCard(e) {
   const idBtnRemove = refs.cardRemoveBtn.getAttribute('data-id');
   const elementToRemove = document.getElementById(`${idBtnRemove}`);
-elementToRemove.remove();
+  elementToRemove.remove();
   filteredLocalItems(idBtnRemove);
   localStorageCheck();
   onToggleModal();
-}
-
-function onToggleModal() {
-  refs.overlay.classList.toggle('js-modal-close');
 }
 
 refs.closeButton.addEventListener('click', onClickBtnlogin);
@@ -64,6 +60,7 @@ function onCloseModalEsc(e) {
 function onToggleModal() {
   refs.modal.classList.toggle('active');
   refs.overlay.classList.toggle('active');
+  refs.overlay.classList.toggle('js-modal-close');
 }
 
 localStorageCheck();
@@ -79,11 +76,11 @@ async function onClickShoppingItem(e) {
   if (e.target.closest('li') && !e.target.closest('button')) {
     marckModal(liId).then(resp => {
       refs.modalContent.innerHTML = resp;
-      refs.cardRemoveBtn.setAttribute('data-id', liId)
+      refs.cardRemoveBtn.setAttribute('data-id', liId);
       refs.modal.classList.toggle('active');
       refs.overlay.classList.toggle('active');
       document.addEventListener('keydown', onCloseModalEsc);
-      refs.cardRemoveBtn.textContent = 'remove from the shopping list'
+      refs.cardRemoveBtn.textContent = 'remove from the shopping list';
     });
   }
 
