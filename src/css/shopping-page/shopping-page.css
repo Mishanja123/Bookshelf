@@ -231,7 +231,7 @@
   max-height: 53px;
   -webkit-box-orient: vertical;
   display: -webkit-box;
-  overflow: scroll;
+  overflow: auto;
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
 }
