@@ -165,7 +165,7 @@
     /* max-height: 501px;  */
     max-height: 440px;
     padding: 40px; 
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .add-book-button {
