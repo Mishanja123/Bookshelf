@@ -21,6 +21,7 @@
 @import url('./footer.css');
 /* Modals */
 @import url('./modals/modals.css');
+@import url('./modals/login-modal.css');
 @import url('./modals/mobile-menu.css');
 
 @font-face {

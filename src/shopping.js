@@ -1,5 +1,6 @@
 import './js/support';
 import './js/mobile-menu.js';
+import './js/skroll.js';
 
 import './css/shopping-page/support-shoping-page.css';
 import { marckModal } from './js/marckupcategories.js';
