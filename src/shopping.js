@@ -38,10 +38,6 @@ function onRemoveCard(e) {
   onToggleModal();
 }
 
-function onToggleModal() {
-  refs.overlay.classList.toggle('js-modal-close');
-}
-
 refs.closeButton.addEventListener('click', onClickBtnlogin);
 refs.overlay.addEventListener('click', closeClickBackdrop);
 
@@ -65,6 +61,7 @@ function onCloseModalEsc(e) {
 function onToggleModal() {
   refs.modal.classList.toggle('active');
   refs.overlay.classList.toggle('active');
+  refs.overlay.classList.toggle('js-modal-close');
 }
 
 localStorageCheck();
