@@ -127,7 +127,6 @@
     letter-spacing: -0.01em;
     text-transform: uppercase;
     padding: 14px 28px;
-    margin-bottom: 8px;
     margin: auto;
     background-color: var(--btn-modal);
     border: 2px solid var(--brand-color);
@@ -142,7 +141,15 @@
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
 }
 
-.under-remove-btn-text{
+.modal-content {
+    position: relative;
+}
+
+.success-message{
+    position: absolute;
+    top: 690px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 242px;
     height: 36px;
     font-size: 10px;
@@ -152,10 +159,6 @@
     color: rgba(17, 17, 17, 0.5);
     text-transform: none;
     margin: auto;
-}
-
-.text-hidden {
-    display: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -211,7 +214,8 @@
 .modal-description {
     margin-bottom: 20px;
 }
-.under-remove-btn-text{
+.success-message{
+    top: 365px;
     width: 324px;
     height: 28px;
     font-size: 12px;
