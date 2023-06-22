@@ -1,8 +1,16 @@
-import './js/support.js';
+import './js/support';
 import './js/mobile-menu.js';
+
 import './css/shopping-page/support-shoping-page.css'
 import { createMarkup } from './js/rendershoppinglist';
 import { marckModal } from './js/marckupcategories.js'
+
+import { refs } from './js/shopng-js/DOM-refs/refs-DOM.js';
+import {
+  takeLocalItems,
+  localStorageCheck,
+} from './js/shopng-js/takeLocalItems/takeLocalitems.js';
+import { filteredLocalItems } from './js/shopng-js/takeLocalItems/filter-local.js';
 
 
 // (() => {
@@ -21,45 +29,72 @@ import { marckModal } from './js/marckupcategories.js'
 // })();
 
 
+refs.cardRemoveBtn.addEventListener('click', onRemoveCard);
 
-const refs = {
-  articlesContainer: document.querySelector('.shopping-list'),
-  descriptionBlock: document.querySelector('.shopping-description-block'),
-  deleteBtn: document.querySelector('.delete-button'),
-};
-
-localStorageChek();
-
-function localStorageChek() {
-  const getLocalStorage = localStorage.getItem('bookCard');
-  const parseLocalStorage = JSON.parse(getLocalStorage);
-
-// console.log(refs.articlesContainer.childNodes.length);
-    if (refs.articlesContainer.childNodes.length - 1 === 0) {
-        refs.descriptionBlock.classList.remove('visually-hidden');
-    }
-  refs.articlesContainer.innerHTML = createMarkup(parseLocalStorage);
+function onRemoveCard(e) {
+  const idBtnRemove = refs.cardRemoveBtn.getAttribute('data-id');
+  const elementToRemove = document.getElementById(`${idBtnRemove}`);
+elementToRemove.remove();
+  filteredLocalItems(idBtnRemove);
+  localStorageCheck();
+  onToggleModal();
 }
 
+function onToggleModal() {
+  refs.overlay.classList.toggle('js-modal-close');
+}
 
+refs.closeButton.addEventListener('click', onClickBtnlogin);
+refs.overlay.addEventListener('click', closeClickBackdrop);
 
+function onClickBtnlogin() {
+  onToggleModal();
+}
 
+function closeClickBackdrop(e) {
+  if (e.currentTarget === e.target) {
+    onToggleModal();
+  }
+}
+
+function onCloseModalEsc(e) {
+  if (e.key === 'Escape') {
+    onToggleModal();
+    document.removeEventListener('keydown', onCloseModalEsc);
+  }
+}
+
+function onToggleModal() {
+  refs.modal.classList.toggle('active');
+  refs.overlay.classList.toggle('active');
+}
+
+localStorageCheck();
 
 refs.articlesContainer.addEventListener('click', onClickShoppingItem);
 
-function onClickShoppingItem(e) {
-    const getLocalStorage = localStorage.getItem('bookCard');
-  const parseLocalStorage = JSON.parse(getLocalStorage);
+async function onClickShoppingItem(e) {
+  const btnCloseId = e.target.getAttribute('btn-close-id');
+  const liId = e.target.closest('li').dataset.id;
 
-    const btnCloseId = e.target.getAttribute('btn-close-id');
-    const myArr = parseLocalStorage.filter(f => f._id !== btnCloseId);
+  filteredLocalItems(btnCloseId);
 
-    localStorage.removeItem('bookCard');
-  localStorage.setItem('bookCard', JSON.stringify(myArr));
-  if (e.target.closest("button") && e.target.nodeName !== "SVG") {
-    e.target.parentNode.remove();
-    localStorageChek()
+  if (e.target.closest('li') && !e.target.closest('button')) {
+    marckModal(liId).then(resp => {
+      refs.modalContent.innerHTML = resp;
+      refs.cardRemoveBtn.setAttribute('data-id', liId)
+      refs.modal.classList.toggle('active');
+      refs.overlay.classList.toggle('active');
+      document.addEventListener('keydown', onCloseModalEsc);
+      refs.cardRemoveBtn.textContent = 'remove from the shopping list'
+    });
   }
+
+  if (e.target.closest('button')) {
+    e.target.parentNode.remove();
+    localStorageCheck();
+  }
+
 
 
       if (parseLocalStorage === []) {
@@ -74,4 +109,6 @@ function onClickCardShopping() {
 marckModal(bookId)
 }
 
+
+}
 
