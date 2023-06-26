@@ -151,7 +151,7 @@
     letter-spacing: -0.04em; 
     color: rgba(17, 17, 17, 0.5);
     text-transform: none;
-    margin: auto;
+    margin: 20px auto 0;
 }
 
 .text-hidden {
@@ -163,7 +163,7 @@
     max-width: 579px;
     height: 100%;
     /* max-height: 501px;  */
-    max-height: 440px;
+    max-height: 480px;
     padding: 40px; 
     overflow: hidden;
 }

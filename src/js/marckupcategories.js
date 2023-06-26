@@ -5,6 +5,10 @@ import {
   fetchBook,
 } from './fetchapis.js';
 
+import image1 from '../images/modal-images/image1.png';
+import image2 from '../images/modal-images/image2.png';
+import image3 from '../images/modal-images/image3.png';
+
 const titleCategories = document.querySelector('.title_categories');
 
 export function marckUpSideCategories() {
@@ -141,22 +145,67 @@ export async function marckCategorieItemMore(target) {
 const modalContent = document.querySelector('.modal-content');
 
 export async function marckModal(bookId) {
-  // const {
-  //   data: { book_image, title, author, description, _id },
-  // } = await fetchBook(bookId);
 
   const markup = await fetchBook(bookId).then(
-    ({ book_image, title, author, description, _id }) => `
-    <div class="book" data-book-id="${_id}">
+    ({ book_image, title, author, description, _id, buy_links }) => `
+    <div class="modal-content">
+<div class="book" data-book-id="${_id}">
       <img class="modal-image" src="${book_image}" alt="Book cover" />
       <div class="modal-info">
       <h3 class="modal-title">${title}</h3>
       <p class="modal-author">${author}</p>
       <p class="modal-description">${
-        description || 'Sorry, there is no description yet.'
-      }</p>
+        description || 'Sorry, there is no description yet.'}</p>
       </div>
-    </div>`
+    </div>
+  </div>
+  <ul class="shopping-link-list">
+    <li class="shopping-link-item">
+      <a
+        href="${buy_links[0].url}"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="shopping-link"
+      >
+        <img
+          class="shopping-link-image"
+          src="${image1}"
+          width="62px"
+          height="19px"
+          alt="Amazon-link"
+      /></a>
+    </li>
+    <li class="shopping-link-item">
+      <a href="${buy_links[1].url}"
+      target="_blank"
+      rel="noreferrer noopener"
+      class="shopping-link">
+        <img
+          class="shopping-link-image"
+          src="${image2}"
+          width="33px"
+          height="32px"
+          alt="Applebook-link"
+      /></a>
+    </li>
+    <li class="shopping-link-item">
+      <a href="${buy_links[4].url}"
+      target="_blank"
+      rel="noreferrer noopener"
+      class="shopping-link">
+        <img
+          class="shopping-link-image"
+          src="${image3}"
+          width="38px"
+          height="36px"
+          alt="Shops-link"
+      /></a>
+    </li>
+  </ul>
+  <button class="add-book-button js-btn-add" type="submit" data-id=${_id}>add to shopping list</button>
+
+  <p class="under-remove-btn-text text-hidden">Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.</p>
+    `
   );
   return markup;
 }
@@ -168,3 +217,4 @@ function miniTitle(string) {
     return string;
   }
 }
+
