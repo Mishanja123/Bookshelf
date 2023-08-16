@@ -3,12 +3,7 @@
     <!-- Лого + навигация -->
     <div class="logo-wrrap">
       <a class="logo" href="/src/index.html">
-        <img
-          src="/src/images/header-logo/logo.png"
-          width="24"
-          height="24"
-          alt="logo"
-        />
+        <img src="/src/images/header-logo/logo.png" width="24" height="24" alt="logo" />
         <b class="logo-txt">Bookshelf</b>
       </a>
 
@@ -54,12 +49,7 @@
       </button> -->
 
       <!-- Бургер кнопки -->
-      <button
-        type="button"
-        class="mobile-menu-open js-open-menu"
-        aria-controls="mobile-menu"
-        aria-expanded="false"
-      >
+      <button type="button" class="mobile-menu-open js-open-menu" aria-controls="mobile-menu" aria-expanded="false">
         <svg class="mobile-menu-open-icon burger" width="28" height="28">
           <use class="burger" href="./images/sprite.svg#icon-menu"></use>
         </svg>
@@ -106,13 +96,13 @@
       '.theme-switch input[type="checkbox"]'
     );
 
-    function switchTheme(e) {
-      if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
-    }
+    // function switchTheme(e) {
+    //   if (e.target.checked) {
+    //     document.documentElement.setAttribute('data-theme', 'dark');
+    //   } else {
+    //     document.documentElement.setAttribute('data-theme', 'light');
+    //   }
+    // }
 
     toggleSwitch.addEventListener('change', switchTheme, false);
     // store user preference for future visits
